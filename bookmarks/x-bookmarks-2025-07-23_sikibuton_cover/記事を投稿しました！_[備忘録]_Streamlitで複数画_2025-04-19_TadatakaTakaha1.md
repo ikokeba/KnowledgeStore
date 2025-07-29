@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - 備忘録
+  - 記事
+  - Python
+  - ユーザーインターフェース
+  - ページ分割
+  - Web開発
+  - フロントエンド
+  - Streamlit
+  - データサイエンス
+---
+
 # takataka
 
 **Author:** @TadatakaTakaha1
@@ -16,7 +30,6 @@
 - [qiita.comから](https://t.co/rsVNUEwwAE)
 
 ---
-tags: #チュートリアル, #備忘録, #記事, #Python, #ユーザーインターフェース, #ページ分割, #Web開発, #フロントエンド, #Streamlit, #データサイエンス
 
 
 

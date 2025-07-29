@@ -1,3 +1,17 @@
+---
+tags:
+  - Gemini
+  - チュートリアル
+  - ツール
+  - 生成AI
+  - 会話生成
+  - AI
+  - 音声生成
+  - NotebookLM
+  - Google
+  - TTS
+---
+
 # K.Ishi@生成AIの産業応用
 
 **Author:** @K_Ishi_AI
@@ -18,7 +32,6 @@ Googleが公開したGeminiの音声生成(TTS)機能でNotebookLMのような�
 で誰でも3分くらいで出来ます。
 
 ---
-tags: #Gemini, #チュートリアル, #ツール, #生成AI, #会話生成, #AI, #音声生成, #NotebookLM, #Google, #TTS
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - 音声分析
+  - DX
+  - Python
+  - AI
+  - 技術記事
+  - 音声処理
+  - 機械学習
+  - データサイエンス
+  - ライブラリ
+---
+
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg
@@ -15,7 +29,6 @@ Pythonは音声分析もできるだとっ！？
 ![Image 1](https://pbs.twimg.com/media/Gd9Lc74agAApNlB?format=jpg&name=900x900)
 
 ---
-tags: #チュートリアル, #音声分析, #DX, #Python, #AI, #技術記事, #音声処理, #機械学習, #データサイエンス, #ライブラリ
 
 
 

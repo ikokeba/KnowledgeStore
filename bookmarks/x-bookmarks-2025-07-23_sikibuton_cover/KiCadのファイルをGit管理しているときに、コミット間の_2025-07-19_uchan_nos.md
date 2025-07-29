@@ -1,3 +1,17 @@
+---
+tags:
+  - 電子回路設計
+  - ツール
+  - 自作CPU
+  - 差分可視化
+  - Git
+  - KiCad
+  - コミット管理
+  - オープンソース
+  - プログラミング
+  - ライブラリ
+---
+
 # uchan 4/12 第5回自作CPUを語る会
 
 **Author:** @uchan_nos
@@ -15,7 +29,6 @@ KiCadのファイルをGit管理しているときに、コミット間の差分
 ![Image 1](https://pbs.twimg.com/media/GwOAKv8boAAkdPj?format=jpg&name=900x900)
 
 ---
-tags: #電子回路設計, #ツール, #自作CPU, #差分可視化, #Git, #KiCad, #コミット管理, #オープンソース, #プログラミング, #ライブラリ
 
 
 

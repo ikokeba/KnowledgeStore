@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - RAG
+  - 記事
+  - 検索手法
+  - AgenticRAG
+  - Microsoft
+  - AI
+  - GraphRAG
+  - NativeRAG
+  - データサイエンス
+---
+
 # Kuman
 
 **Author:** @KUMAN_R
@@ -16,7 +30,6 @@
 - [zenn.devから](https://t.co/kxFRum0KId)
 
 ---
-tags: #チュートリアル, #RAG, #記事, #検索手法, #AgenticRAG, #Microsoft, #AI, #GraphRAG, #NativeRAG, #データサイエンス
 
 
 

@@ -1,3 +1,20 @@
+---
+tags:
+  - チュートリアル
+  - ソフトウェア開発
+  - 記事
+  - Python
+  - PEP723
+  - Web開発
+  - uv
+  - 開発体験
+  - 技術共有
+  - プログラミング
+---
+
+---
+  - A2A
+---
 # ゴマフリーダム@Python教室
 
 **Author:** @gomafreeeeeedom
@@ -19,7 +36,6 @@
 - [From qiita.com](https://t.co/mudyysSqK8)
 
 ---
-tags: #チュートリアル, #ソフトウェア開発, #記事, #Python, #PEP723, #Web開発, #uv, #開発体験, #技術共有, #プログラミング
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - GitGraph
+  - ツール
+  - 記事
+  - Cursor
+  - 拡張機能
+  - Web開発
+  - Git
+  - プログラミング
+  - 開発者
+  - GitLens
+---
+
 # ふぁど｜なんでもやるCTO
 
 **Author:** @fadysan_rh
@@ -11,7 +25,6 @@
 CursorでGit使ってる人は、Git Graph v3とGitlensっていう拡張機能入れとけ。
 
 ---
-tags: #GitGraph, #ツール, #記事, #Cursor, #拡張機能, #Web開発, #Git, #プログラミング, #開発者, #GitLens
 
 
 

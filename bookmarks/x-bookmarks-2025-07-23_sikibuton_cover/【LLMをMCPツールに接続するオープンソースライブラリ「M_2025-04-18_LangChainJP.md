@@ -1,3 +1,17 @@
+---
+tags:
+  - MCP
+  - LangChain
+  - ツール
+  - Python
+  - エージェント
+  - AI
+  - 機械学習
+  - オープンソース
+  - プログラミング
+  - ライブラリ
+---
+
 # LangChainJP
 
 **Author:** @LangChainJP
@@ -17,7 +31,6 @@
 ![Image 1](https://pbs.twimg.com/media/GozJresXgAADJCC?format=jpg&name=900x900)
 
 ---
-tags: #MCP, #LangChain, #ツール, #Python, #エージェント, #AI, #機械学習, #オープンソース, #プログラミング, #ライブラリ
 
 
 

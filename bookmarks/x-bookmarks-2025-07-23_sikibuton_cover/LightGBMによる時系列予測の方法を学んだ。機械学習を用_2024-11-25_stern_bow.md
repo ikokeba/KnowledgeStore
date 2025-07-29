@@ -1,3 +1,17 @@
+---
+tags:
+  - LightGBM
+  - チュートリアル
+  - 分析
+  - 記事
+  - Python
+  - 時系列予測
+  - 特徴量エンジニアリング
+  - トレンド除去
+  - 機械学習
+  - データサイエンス
+---
+
 # yoschi_s
 
 **Author:** @stern_bow
@@ -18,7 +32,6 @@ LightGBMによる時系列予測の方法を学んだ。機械学習を用いる
 - [stern-bow.hatenablog.comから](https://t.co/6QKLDFI8xu)
 
 ---
-tags: #LightGBM, #チュートリアル, #分析, #記事, #Python, #時系列予測, #特徴量エンジニアリング, #トレンド除去, #機械学習, #データサイエンス
 
 
 

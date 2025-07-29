@@ -1,3 +1,17 @@
+---
+tags:
+  - 動画解説
+  - ClaudeCode
+  - チュートリアル
+  - ソフトウェア開発
+  - ツール
+  - AI
+  - 開発
+  - 機械学習
+  - プログラミング
+  - 教育
+---
+
 # 吉波拓夢 『Claude Codeで学ぶAI駆動開発』
 
 **Author:** @yoshi8__
@@ -17,7 +31,6 @@ Claude Code Actionに関する解説動画を撮りました！
 - [youtube.com【Claude Code勉強会#2】Claude Code Actionと並列開発についてClaude Codeを解説する勉強会です！今回はClaude Code Actionと並列開発について説明していきます。](https://t.co/ovPe6tw2wb)
 
 ---
-tags: #動画解説, #ClaudeCode, #チュートリアル, #ソフトウェア開発, #ツール, #AI, #開発, #機械学習, #プログラミング, #教育
 
 
 

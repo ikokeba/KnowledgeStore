@@ -1,3 +1,17 @@
+---
+tags:
+  - 機械学習
+  - ディープラーニング
+  - チュートリアル
+  - ニューラルネットワーク
+  - 記事
+  - Python
+  - AI
+  - 活性化関数
+  - データサイエンス
+  - 数学
+---
+
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg
@@ -15,7 +29,6 @@
 ![Image 1](https://pbs.twimg.com/media/GgNF-xlbQAAVaQ6?format=jpg&name=900x900)
 
 ---
-tags: #機械学習, #ディープラーニング, #チュートリアル, #ニューラルネットワーク, #記事, #Python, #AI, #活性化関数, #データサイエンス, #数学
 
 
 

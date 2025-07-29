@@ -1,3 +1,17 @@
+---
+tags:
+  - CLIツール
+  - 初心者向け
+  - ソフトウェア開発
+  - ツール
+  - 技術
+  - AI
+  - 開発
+  - IDE
+  - プログラミング
+  - Anthropic
+---
+
 # Oikon＠外資ITエンジニア
 
 **Author:** @gaishi_narou
@@ -21,7 +35,6 @@ Claude CodeのサポートするIDE：
 ![Image 1](https://pbs.twimg.com/media/GryO-18WMAABMHx?format=jpg&name=900x900)
 
 ---
-tags: #CLIツール, #初心者向け, #ソフトウェア開発, #ツール, #技術, #AI, #開発, #IDE, #プログラミング, #Anthropic
 
 
 

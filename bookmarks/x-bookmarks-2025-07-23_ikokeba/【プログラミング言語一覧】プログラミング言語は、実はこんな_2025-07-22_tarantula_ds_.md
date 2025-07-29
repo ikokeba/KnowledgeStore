@@ -1,3 +1,17 @@
+---
+tags:
+  - 技術スタック
+  - JavaScript
+  - 記事
+  - Python
+  - PHP
+  - HTML
+  - R
+  - 学習
+  - データサイエンス
+  - プログラミング
+---
+
 # タランチュラ | データサイエンティスト
 
 **Author:** @tarantula_ds_
@@ -29,7 +43,6 @@
 ![Image 2](https://pbs.twimg.com/media/GwafdJ3bEAQv3Fc?format=jpg&name=900x900)
 
 ---
-tags: #技術スタック, #JavaScript, #記事, #Python, #PHP, #HTML, #R, #学習, #データサイエンス, #プログラミング
 
 
 

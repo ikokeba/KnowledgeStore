@@ -1,3 +1,17 @@
+---
+tags:
+  - プラグイン
+  - チュートリアル
+  - ノートアプリ
+  - 情報整理
+  - ツール
+  - Markdown
+  - 勉強会
+  - 技術共有
+  - 生産性向上
+  - Obsidian
+---
+
 # カレーちゃん
 
 **Author:** @currypurin
@@ -16,7 +30,6 @@
 - [From docswell.com](https://t.co/3JBOUOiOC2)
 
 ---
-tags: #プラグイン, #チュートリアル, #ノートアプリ, #情報整理, #ツール, #Markdown, #勉強会, #技術共有, #生産性向上, #Obsidian
 
 
 

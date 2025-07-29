@@ -1,3 +1,17 @@
+---
+tags:
+  - プラグイン
+  - 生産性
+  - チュートリアル
+  - ツール
+  - Cursor
+  - AI
+  - Web開発
+  - textlint
+  - Obsidian
+  - ライブラリ
+---
+
 # 松濤Vimmer
 
 **Author:** @shotovim
@@ -15,7 +29,6 @@ ObsidianをCursorなどの外部ツールと組み合わせるのではなくプ
 ![Image 1](https://pbs.twimg.com/media/GuxtJ27WMAAaPQ5?format=jpg&name=900x900)
 
 ---
-tags: #プラグイン, #生産性, #チュートリアル, #ツール, #Cursor, #AI, #Web開発, #textlint, #Obsidian, #ライブラリ
 
 
 

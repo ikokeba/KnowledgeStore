@@ -1,3 +1,17 @@
+---
+tags:
+  - ModuleLLM
+  - M5Stack
+  - UART通信
+  - ドキュメント翻訳
+  - チュートリアル
+  - 組み込みシステム
+  - デバイス管理
+  - AI
+  - 技術記事
+  - ハードウェア
+---
+
 # タカヲ(Takao)
 
 **Author:** @mongonta555
@@ -23,7 +37,6 @@
 ![Image 1](https://pbs.twimg.com/media/GdYcrgQasAA_nqy?format=png&name=900x900)
 
 ---
-tags: #ModuleLLM, #M5Stack, #UART通信, #ドキュメント翻訳, #チュートリアル, #組み込みシステム, #デバイス管理, #AI, #技術記事, #ハードウェア
 
 
 

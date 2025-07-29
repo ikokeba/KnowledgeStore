@@ -1,3 +1,17 @@
+---
+tags:
+  - プレゼンテーション
+  - マークダウン
+  - CLI
+  - JavaScript
+  - ツール
+  - AI
+  - ソフトウェアリリース
+  - Web開発
+  - Git
+  - オープンソース
+---
+
 # Riku@AIエージェントマニア
 
 **Author:** @riku_ai_chatgpt
@@ -17,7 +31,6 @@ Marp CLI v4.1.0 has been released!!
 https://github.com/marp-team/marp-cli/releases/tag/v4.1.0…
 
 ---
-tags: #プレゼンテーション, #マークダウン, #CLI, #JavaScript, #ツール, #AI, #ソフトウェアリリース, #Web開発, #Git, #オープンソース
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - 論文
+  - 実装
+  - ツール
+  - 卒論
+  - 修論
+  - 機械学習
+  - データサイエンス
+  - プログラミング
+  - リサーチ
+  - PapersWithCode
+---
+
 # タランチュラ | データサイエンティスト
 
 **Author:** @tarantula_ds_
@@ -25,7 +39,6 @@ Papers with Codeというサイトを皆さんは使ったことありますか?
 ![Image 2](https://pbs.twimg.com/media/GwNLeNIWMAA2RkI?format=jpg&name=900x900)
 
 ---
-tags: #論文, #実装, #ツール, #卒論, #修論, #機械学習, #データサイエンス, #プログラミング, #リサーチ, #PapersWithCode
 
 
 

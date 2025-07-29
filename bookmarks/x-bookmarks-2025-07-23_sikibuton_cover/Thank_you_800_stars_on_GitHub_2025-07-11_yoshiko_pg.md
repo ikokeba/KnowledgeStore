@@ -1,3 +1,17 @@
+---
+tags:
+  - CSS
+  - JavaScript
+  - ツール
+  - Python
+  - HTML
+  - GitHub
+  - Web開発
+  - プログラミング
+  - TypeScript
+  - ライブラリ
+---
+
 # よしこ / yoshiko
 
 **Author:** @yoshiko_pg
@@ -21,7 +35,6 @@ Swift, Kotlin, Dart, Python, YAML, Solidity, Vim script
 - [github.comGitHub - yoshiko-pg/difit: A lightweight command-line tool that spins up a local web server to...A lightweight command-line tool that spins up a local web server to display Git commit diffs in a GitHub-like Files changed view - yoshiko-pg/difit](https://t.co/5kHApXFcBm)
 
 ---
-tags: #CSS, #JavaScript, #ツール, #Python, #HTML, #GitHub, #Web開発, #プログラミング, #TypeScript, #ライブラリ
 
 
 

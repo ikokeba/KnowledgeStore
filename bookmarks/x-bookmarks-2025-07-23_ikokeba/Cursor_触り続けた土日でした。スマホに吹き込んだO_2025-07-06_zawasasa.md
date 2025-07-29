@@ -1,3 +1,17 @@
+---
+tags:
+  - 生産性
+  - ツール
+  - ライフハック
+  - データ整理
+  - デイリーメモ
+  - Cursor
+  - AI
+  - コーディング
+  - Obsidian
+  - タスク管理
+---
+
 # ささ
 
 **Author:** @zawasasa
@@ -19,7 +33,6 @@ Cursor 触り続けた土日でした。
 ![Image 1](https://pbs.twimg.com/media/GvLWy72WMAE4-o5?format=jpg&name=900x900)
 
 ---
-tags: #生産性, #ツール, #ライフハック, #データ整理, #デイリーメモ, #Cursor, #AI, #コーディング, #Obsidian, #タスク管理
 
 
 

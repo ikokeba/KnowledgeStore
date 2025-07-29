@@ -1,3 +1,17 @@
+---
+tags:
+  - 演習
+  - チュートリアル
+  - 知識チェック
+  - バージョン管理
+  - Microsoft
+  - GitHub
+  - Web開発
+  - Git
+  - オンライン学習
+  - プログラミング
+---
+
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg
@@ -19,7 +33,6 @@ Git を構成する方法
 Git の基本的なコマンド
 
 ---
-tags: #演習, #チュートリアル, #知識チェック, #バージョン管理, #Microsoft, #GitHub, #Web開発, #Git, #オンライン学習, #プログラミング
 
 
 

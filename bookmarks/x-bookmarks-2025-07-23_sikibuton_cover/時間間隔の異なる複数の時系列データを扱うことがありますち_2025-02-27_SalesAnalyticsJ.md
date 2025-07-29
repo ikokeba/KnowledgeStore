@@ -1,3 +1,17 @@
+---
+tags:
+  - データ可視化
+  - SalesAnalytics
+  - チュートリアル
+  - 分析
+  - リサンプリング
+  - ツール
+  - Python
+  - データ処理
+  - 時系列データ
+  - データサイエンス
+---
+
 # ふくろう系データサイエンティスト
 
 **Author:** @SalesAnalyticsJ
@@ -22,7 +36,6 @@
 - [salesanalytics.co.jpから](https://t.co/wpQHW31wl9)
 
 ---
-tags: #データ可視化, #SalesAnalytics, #チュートリアル, #分析, #リサンプリング, #ツール, #Python, #データ処理, #時系列データ, #データサイエンス
 
 
 

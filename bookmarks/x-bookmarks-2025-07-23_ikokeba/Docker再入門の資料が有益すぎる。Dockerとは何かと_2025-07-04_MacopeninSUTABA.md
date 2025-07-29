@@ -1,3 +1,17 @@
+---
+tags:
+  - コンテナ技術
+  - チュートリアル
+  - DevOps
+  - 生成AI
+  - ビジネスハック
+  - Web開発
+  - Docker
+  - 技術資料
+  - Dockerイメージ
+  - 基礎学習
+---
+
 # かずなり | 生成AI×ビジネスハック
 
 **Author:** @MacopeninSUTABA
@@ -22,7 +36,6 @@ https://speakerdeck.com/yoshiyoshiharu/dockerzai-ru-men-kontenaimezibian…
 - [https://speakerdeck.com/yoshiyoshiharu/dockerzai-ru-men-kontenaimezibian…](https://t.co/1Rn7asvOzH)
 
 ---
-tags: #コンテナ技術, #チュートリアル, #DevOps, #生成AI, #ビジネスハック, #Web開発, #Docker, #技術資料, #Dockerイメージ, #基礎学習
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - ClaudeCode
+  - エージェント機能
+  - Gemini
+  - OpenAI
+  - ツール
+  - AI
+  - GPU
+  - ローカルLLM
+  - 機械学習
+  - オープンソース
+---
+
 # ミロ
 
 **Author:** @ml0_1337
@@ -15,7 +29,6 @@ OpenAIやGeminiモデルをClaude Code上で動かせるヤバいツールがオ
 消される前にクローンしとくか…
 
 ---
-tags: #ClaudeCode, #エージェント機能, #Gemini, #OpenAI, #ツール, #AI, #GPU, #ローカルLLM, #機械学習, #オープンソース
 
 
 

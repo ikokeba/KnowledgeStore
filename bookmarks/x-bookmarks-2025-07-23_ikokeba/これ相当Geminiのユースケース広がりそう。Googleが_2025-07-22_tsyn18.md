@@ -1,3 +1,17 @@
+---
+tags:
+  - Gemini
+  - 画像処理
+  - プロンプト
+  - 物体検知
+  - ツール
+  - 記事
+  - AI
+  - 機械学習
+  - Google
+  - 領域検知
+---
+
 # 中村俊也｜ＡＩキャンプ®
 
 **Author:** @tsyn18
@@ -19,7 +33,6 @@
 ![Image 3](https://pbs.twimg.com/media/GwbXLrMbEAEB4pk?format=png&name=240x240)
 
 ---
-tags: #Gemini, #画像処理, #プロンプト, #物体検知, #ツール, #記事, #AI, #機械学習, #Google, #領域検知
 
 
 

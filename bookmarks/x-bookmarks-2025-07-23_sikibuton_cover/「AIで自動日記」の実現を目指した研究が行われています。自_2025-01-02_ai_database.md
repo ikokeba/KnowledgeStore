@@ -1,3 +1,17 @@
+---
+tags:
+  - センサーデータ
+  - LLM
+  - 自然言語処理
+  - ツール
+  - 記事
+  - AI
+  - 研究
+  - 自動化
+  - 機械学習
+  - データサイエンス
+---
+
 # AIDB
 
 **Author:** @ai_database
@@ -20,7 +34,6 @@ https://ai-data-base.com/archives/81453
 - [ai-data-base.comから](https://t.co/GGEjokzcx6)
 
 ---
-tags: #センサーデータ, #LLM, #自然言語処理, #ツール, #記事, #AI, #研究, #自動化, #機械学習, #データサイエンス
 
 
 

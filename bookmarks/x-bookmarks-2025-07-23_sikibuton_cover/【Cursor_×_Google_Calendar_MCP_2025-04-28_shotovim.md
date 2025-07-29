@@ -1,3 +1,17 @@
+---
+tags:
+  - 生産性
+  - チュートリアル
+  - ツール
+  - シームレス同期
+  - Cursor
+  - Web開発
+  - GoogleCalendar
+  - プログラミング
+  - Obsidian
+  - タスク管理
+---
+
 # 松濤Vimmer
 
 **Author:** @shotovim
@@ -13,7 +27,6 @@
 今回紹介する方法めちゃくちゃ使えます。Obsidian のタスクをCursor内でGoogle Calendar MCPを使うことでかなり簡単にGoogle Calendar に反映できます。詳細は動画を参考にしてください。
 
 ---
-tags: #生産性, #チュートリアル, #ツール, #シームレス同期, #Cursor, #Web開発, #GoogleCalendar, #プログラミング, #Obsidian, #タスク管理
 
 
 

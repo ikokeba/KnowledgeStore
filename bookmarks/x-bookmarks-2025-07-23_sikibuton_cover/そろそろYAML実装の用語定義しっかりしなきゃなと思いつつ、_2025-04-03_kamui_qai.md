@@ -1,3 +1,17 @@
+---
+tags:
+  - 注意事項
+  - 実装手順
+  - 技術文書
+  - ソフトウェア開発
+  - YAML
+  - ツール
+  - 記事
+  - データフォーマット
+  - プログラミング
+  - 抽象化
+---
+
 # 神威/KAMUI
 
 **Author:** @kamui_qai
@@ -27,7 +41,6 @@
 ![Image 2](https://pbs.twimg.com/media/Gnm_VgPawAAhQam?format=png&name=240x240)
 
 ---
-tags: #注意事項, #実装手順, #技術文書, #ソフトウェア開発, #YAML, #ツール, #記事, #データフォーマット, #プログラミング, #抽象化
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - Qiita
+  - FastAPI
+  - チュートリアル
+  - ソフトウェア開発
+  - API
+  - 記事
+  - Python
+  - Web開発
+  - 学習
+  - プログラミング
+---
+
 # ねぼすけAI
 
 **Author:** @AInebosuke
@@ -16,7 +30,6 @@
 - [qiita.comから](https://t.co/eYp9HJGsAE)
 
 ---
-tags: #Qiita, #FastAPI, #チュートリアル, #ソフトウェア開発, #API, #記事, #Python, #Web開発, #学習, #プログラミング
 
 
 

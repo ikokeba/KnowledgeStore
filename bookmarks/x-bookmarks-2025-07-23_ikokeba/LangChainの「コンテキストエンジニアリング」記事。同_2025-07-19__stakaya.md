@@ -1,3 +1,17 @@
+---
+tags:
+  - 情報選択
+  - 自然言語処理
+  - LangChain
+  - ツール
+  - Python
+  - 記事
+  - AI
+  - データ処理
+  - コンテキストエンジニアリング
+  - 要約
+---
+
 # Shinichi Takaŷanagi
 
 **Author:** @_stakaya
@@ -17,7 +31,6 @@ Context Engineering
 - [From blog.langchain.com](https://t.co/z5T8hADj3h)
 
 ---
-tags: #情報選択, #自然言語処理, #LangChain, #ツール, #Python, #記事, #AI, #データ処理, #コンテキストエンジニアリング, #要約
 
 
 

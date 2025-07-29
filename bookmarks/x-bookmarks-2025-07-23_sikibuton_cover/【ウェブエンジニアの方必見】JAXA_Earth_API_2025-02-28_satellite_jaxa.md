@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - API
+  - JavaScript
+  - ツール
+  - 地球観測
+  - Web開発
+  - JAXA
+  - データサイエンス
+  - ウェブアプリ
+  - ライブラリ
+---
+
 # JAXAサテライトナビゲーター
 
 **Author:** @satellite_jaxa
@@ -20,7 +34,6 @@ https://data.earth.jaxa.jp
 - [data.earth.jaxa.jpJAXA Earth APICOG/STAC based effective satellite image data provision service | COG/STACに準拠した衛星データ提供サービス](https://t.co/cF2gFnIE8B)
 
 ---
-tags: #チュートリアル, #API, #JavaScript, #ツール, #地球観測, #Web開発, #JAXA, #データサイエンス, #ウェブアプリ, #ライブラリ
 
 
 

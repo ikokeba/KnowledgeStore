@@ -1,3 +1,17 @@
+---
+tags:
+  - 音声認識
+  - Whisper
+  - transformers
+  - チュートリアル
+  - ツール
+  - Python
+  - AI
+  - 機械学習
+  - オープンソース
+  - ライブラリ
+---
+
 # クジラ飛行机
 
 **Author:** @kujirahand
@@ -16,7 +30,6 @@ Whisperでリアルタイム音声認識ツールを作ってみよう / マイ�
 - [news.mynavi.jpから](https://t.co/upuBEtUmhr)
 
 ---
-tags: #音声認識, #Whisper, #transformers, #チュートリアル, #ツール, #Python, #AI, #機械学習, #オープンソース, #ライブラリ
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - デザイン
+  - チュートリアル
+  - Mermaid
+  - ツール
+  - ドキュメンテーション
+  - 技術
+  - Web開発
+  - 図表
+  - AWS
+  - 構成図
+---
+
 # Qiita 人気の投稿
 
 **Author:** @qiitapoi
@@ -17,7 +31,6 @@ MermaidでAWS構成図を作成するテクニック http://dlvr.it/TLdWtz #Qiit
 - [From qiita.com](https://t.co/Gt8LqnIYf3)
 
 ---
-tags: #デザイン, #チュートリアル, #Mermaid, #ツール, #ドキュメンテーション, #技術, #Web開発, #図表, #AWS, #構成図
 
 
 

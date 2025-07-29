@@ -1,3 +1,17 @@
+---
+tags:
+  - バイパス
+  - Claude
+  - yoshiko
+  - ツール
+  - AI
+  - 快適化
+  - JSON
+  - 自動化
+  - 設定
+  - プログラミング
+---
+
 # よしこ / yoshiko
 
 **Author:** @yoshiko_pg
@@ -18,7 +32,6 @@ bypassPermissionsにすると--dangerously-skip-permissions状態になるみた
 ![Image 1](https://pbs.twimg.com/media/GuhUrGoWwAAhKoA?format=png&name=small)
 
 ---
-tags: #バイパス, #Claude, #yoshiko, #ツール, #AI, #快適化, #JSON, #自動化, #設定, #プログラミング
 
 
 

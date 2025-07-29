@@ -1,3 +1,17 @@
+---
+tags:
+  - プラグイン
+  - ツール
+  - 記事
+  - サーバー
+  - 情報共有
+  - REST_API
+  - Web開発
+  - 技術解説
+  - Obsidian
+  - API_Key
+---
+
 # 七誌
 
 **Author:** @7shi
@@ -16,7 +30,6 @@
 - [github.comから](https://t.co/k7HsACrcyk)
 
 ---
-tags: #プラグイン, #ツール, #記事, #サーバー, #情報共有, #REST_API, #Web開発, #技術解説, #Obsidian, #API_Key
 
 
 

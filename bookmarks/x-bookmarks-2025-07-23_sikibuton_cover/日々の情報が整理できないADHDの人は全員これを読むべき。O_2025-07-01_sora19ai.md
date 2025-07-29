@@ -1,3 +1,17 @@
+---
+tags:
+  - 情報整理
+  - ツール
+  - 記事
+  - GeminiCLI
+  - 思考支援
+  - ADHD
+  - 自動化
+  - 第二の脳
+  - Obsidian
+  - ライブラリ
+---
+
 # そら  Dify 自動化オタク
 
 **Author:** @sora19ai
@@ -15,7 +29,6 @@
 ![Image 1](https://pbs.twimg.com/media/GuyH-PXXQAA62jH?format=png&name=900x900)
 
 ---
-tags: #情報整理, #ツール, #記事, #GeminiCLI, #思考支援, #ADHD, #自動化, #第二の脳, #Obsidian, #ライブラリ
 
 
 

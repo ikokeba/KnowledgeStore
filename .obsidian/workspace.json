@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "e7797c5f8a1fcfcb",
+    "type": "split",
+    "children": [
+      {
+        "id": "b133e8fa64311c49",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4b9023957ca7253c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "グラフビュー"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "12af88fc45ac2d5b",
+    "type": "split",
+    "children": [
+      {
+        "id": "961e6f69166f114e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6ea4016787d31830",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "ファイルエクスプローラ"
+            }
+          },
+          {
+            "id": "4960e073717d0549",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "検索"
+            }
+          },
+          {
+            "id": "3ec2606ae50da115",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "ブックマーク"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "16a46adbfba83975",
+    "type": "split",
+    "children": [
+      {
+        "id": "faa12d3fecd25612",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa7b1e1d198fd791",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "バックリンク"
+            }
+          },
+          {
+            "id": "fcc3df3ea9382f8b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "アウトゴーイングリンク"
+            }
+          },
+          {
+            "id": "64b5bb4455003822",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "タグ"
+            }
+          },
+          {
+            "id": "5f993e54238bcda1",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "アウトライン"
+            }
+          },
+          {
+            "id": "69fa59f2647343f4",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "すべてのプロパティ"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false
+    }
+  },
+  "active": "4b9023957ca7253c",
+  "lastOpenFiles": [
+    "bookmarks/x-bookmarks-2025-07-29/ｽｯつ_「Webサービス公開前のチェックリスト」_2025-07-25_catnose99.md",
+    "bookmarks/x-bookmarks-2025-07-29/遅くなりましたが、設計ナイト2025の発表資料アップしました_2025-07-28__pochi.md",
+    "bookmarks/x-bookmarks-2025-07-29/データ構造が複雑になるほど対策なしでは分析精度を高くすること_2025-07-25_light940.md",
+    "bookmarks/x-bookmarks-2025-07-29/ちなみに道中の新幹線では、イマドキのLLMで使われているTr_2025-07-28_mi141.md",
+    "bookmarks/x-bookmarks-2025-07-29/このプロセスだってお母さんずっと言ってるでしょ〜！①すぐ_2025-07-28_chira.md",
+    "bookmarks/x-bookmarks-2025-07-29/【論文を実装する上で必須サイト】卒論・修論を書く季節ですね_2025-07-20_tarantula_ds_.md",
+    "bookmarks/x-bookmarks-2025-07-29/【松尾研_論文の書き方】僕はこの記事を参考に修士論文を執_2025-06-26_tarantula_ds_.md",
+    "bookmarks/x-bookmarks-2025-07-29/【ローカル環境で動作するAI研究アシスタント「Local_D_2025-03-21_LangChainJP.md",
+    "bookmarks/x-bookmarks-2025-07-29/【データサイエンス系チートシートを網羅してみた】気づけば8_2025-07-18_tarantula_ds_.md",
+    "bookmarks/x-bookmarks-2025-07-29/【AWS】KiroのSPECでチーム開発をどうするかSPE_2025-07-27_qiitapoi.md",
+    "bookmarks/x-bookmarks-2025-07-29/「個人開発_完全ガイド」を教えてもらったんだけどめっちゃ良い_2025-07-19_MLBear2.md",
+    "bookmarks/x-bookmarks-2025-07-29/RAGの実装戦略がわかりやすく整理されている_2025-07-27_MacopeninSUTABA.md",
+    "bookmarks/x-bookmarks-2025-07-29/Pandas_concat完全ガイド｜複数CSVからData_2025-07-26_qiitapoi.md",
+    "bookmarks/x-bookmarks-2025-07-29/matplotlib,_seaborn,_plotlyは、同_2025-07-26_abe_tetsu.md",
+    "bookmarks/x-bookmarks-2025-07-29/kiroのWait_list待ち対策、macなら_brew_2025-07-21__himorishige.md",
+    "bookmarks/x-bookmarks-2025-07-29/index.md",
+    "bookmarks/x-bookmarks-2025-07-29/Docker_management_panel_with_w_2025-07-27_tom_doerr.md",
+    "bookmarks/x-bookmarks-2025-07-29/Cursor、Windsurf_などで使える_CodeRab_2025-07-25_kinopee_ai.md",
+    "bookmarks/x-bookmarks-2025-07-29/AI_framework_for_semantic_sear_2025-07-25_tom_doerr.md",
+    "bookmarks/x-bookmarks-2025-07-29/1._NotebookLMが「Featured_Notebo_2025-07-20_kosuke_agos.md",
+    "bookmarks/x-bookmarks-2025-07-29/3D_Store_Displays_by_GPT-4oP_2025-07-27_TechieBySA.md",
+    "bookmarks/x-bookmarks-2025-07-29",
+    "bookmarks/x-bookmarks-2025-07-28/Minecraft_Countries_by_GPT-4o_2025-07-26_TechieBySA.md",
+    "bookmarks/x-bookmarks-2025-07-23_ikokeba/Easily_add_fun_line-drawn_peop_2025-07-20_egeberkina.md",
+    "bookmarks/x-bookmarks-2025-07-28/3D_Logo_Renders_by_GPT-4oPro_2025-07-25_TechieBySA.md",
+    "bookmarks/x-bookmarks-2025-07-23_ikokeba/鏡を使った、少数カメラPhotogrammetry3DGS_2025-07-03_SHIGE_3DSCAN.md",
+    "bookmarks/x-bookmarks-2025-07-28/Since_Midjourney_announced_tha_2025-07-25_egeberkina.md",
+    "bookmarks/x-bookmarks-2025-07-28",
+    "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover_backup_20250729_120409",
+    "_scripts/add_obsidian_tags.py"
+  ]
+}

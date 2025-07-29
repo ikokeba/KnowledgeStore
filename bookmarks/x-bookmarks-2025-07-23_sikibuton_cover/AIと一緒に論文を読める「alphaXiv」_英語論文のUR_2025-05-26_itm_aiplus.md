@@ -1,3 +1,17 @@
+---
+tags:
+  - 技術スタック
+  - 英語
+  - 論文
+  - arxiv
+  - 自然言語処理
+  - ツール
+  - ブログ
+  - AI
+  - alphaXiv
+  - データサイエンス
+---
+
 # ITmedia AI＋
 
 **Author:** @itm_aiplus
@@ -20,7 +34,6 @@ AIと一緒に論文を読める「alphaXiv」　英語論文のURL「arxiv」�
 - [itmedia.co.jpから](https://t.co/Mr54lZARyA)
 
 ---
-tags: #技術スタック, #英語, #論文, #arxiv, #自然言語処理, #ツール, #ブログ, #AI, #alphaXiv, #データサイエンス
 
 
 

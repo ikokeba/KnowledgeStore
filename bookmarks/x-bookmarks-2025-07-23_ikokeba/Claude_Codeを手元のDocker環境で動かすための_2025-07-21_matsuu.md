@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - セットアップ
+  - ツール
+  - AI
+  - 開発環境
+  - GitHub
+  - Docker
+  - 機械学習
+  - VSCode
+  - プログラミング
+---
+
 # matsuu
 
 **Author:** @matsuu
@@ -16,7 +30,6 @@ Claude Codeを手元のDocker環境で動かすための最低限一式。いい
 - [From github.com](https://t.co/4YYIR6K9kR)
 
 ---
-tags: #チュートリアル, #セットアップ, #ツール, #AI, #開発環境, #GitHub, #Docker, #機械学習, #VSCode, #プログラミング
 
 
 

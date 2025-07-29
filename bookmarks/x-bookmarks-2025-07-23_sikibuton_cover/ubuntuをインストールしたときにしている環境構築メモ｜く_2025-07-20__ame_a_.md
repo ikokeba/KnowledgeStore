@@ -1,3 +1,17 @@
+---
+tags:
+  - Ubuntu
+  - チュートリアル
+  - Linux
+  - 備忘録
+  - 環境構築
+  - 記事
+  - tmux
+  - 開発
+  - オープンソース
+  - neovim
+---
+
 # 龍
 
 **Author:** @_ame_a_
@@ -20,7 +34,6 @@ ubuntuをインストールしたときにしている環境構築メモ｜く�
 - [zenn.devから](https://t.co/3kCcbw1cDP)
 
 ---
-tags: #Ubuntu, #チュートリアル, #Linux, #備忘録, #環境構築, #記事, #tmux, #開発, #オープンソース, #neovim
 
 
 

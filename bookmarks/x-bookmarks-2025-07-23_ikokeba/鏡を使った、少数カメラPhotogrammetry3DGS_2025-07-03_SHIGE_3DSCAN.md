@@ -1,3 +1,17 @@
+---
+tags:
+  - 技術開発
+  - 3Dモデリング
+  - チュートリアル
+  - カメラ技術
+  - ツール
+  - コンピュータグラフィックス
+  - Photogrammetry
+  - SHIGE
+  - 映像制作
+  - デジタルアート
+---
+
 # しげ
 
 **Author:** @SHIGE_3DSCAN
@@ -19,7 +33,6 @@
 ![Image 3](https://pbs.twimg.com/media/Gu6qW0kb0AMGYpT?format=png&name=small)
 
 ---
-tags: #技術開発, #3Dモデリング, #チュートリアル, #カメラ技術, #ツール, #コンピュータグラフィックス, #Photogrammetry, #SHIGE, #映像制作, #デジタルアート
 
 
 

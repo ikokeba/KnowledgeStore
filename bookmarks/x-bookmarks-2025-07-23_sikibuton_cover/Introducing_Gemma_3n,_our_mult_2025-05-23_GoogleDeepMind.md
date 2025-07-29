@@ -1,3 +1,17 @@
+---
+tags:
+  - オンデバイスAI
+  - マルチモーダルモデル
+  - クラウド
+  - ツール
+  - AI
+  - データ処理
+  - モバイルAI
+  - 機械学習
+  - GoogleDeepMind
+  - ライブラリ
+---
+
 # Google DeepMind
 
 **Author:** @GoogleDeepMind
@@ -15,7 +29,6 @@ It runs with a smaller memory footprint, cutting down RAM usage by nearly 3x –
 Now available in early
 
 ---
-tags: #オンデバイスAI, #マルチモーダルモデル, #クラウド, #ツール, #AI, #データ処理, #モバイルAI, #機械学習, #GoogleDeepMind, #ライブラリ
 
 
 

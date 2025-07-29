@@ -1,22 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Xブックマークタグ自動生成スクリプト
+Xブックマークタグ自動生成・Obsidianプロパティ形式追加スクリプト
 
 機能:
 - OpenAI APIを使用してブックマークコンテンツを分析
 - 分野・技術スタック・用途別のタグを自動生成
 - 生成されたタグをJSONファイルに保存
+- Obsidianプロパティ形式（YAML frontmatter）でタグを追加
+- 指定したフォルダのみに対してタグ付けを実行
 
 作成日: 2025-07-28
 作成者: AI Assistant
 更新履歴:
 - 2025-07-28: 初版作成
+- 2025-01-27: コマンドライン引数対応、指定フォルダ処理機能追加
+- 2025-01-27: Obsidianプロパティ形式タグ追加機能をマージ
 """
 
 import os
 import json
 import re
+import argparse
 from pathlib import Path
 from typing import Dict, List, Optional
 import openai
@@ -136,45 +141,9 @@ class BookmarkTagGenerator:
             print(f"OpenAI API エラー: {e}")
             return []
     
-    def process_bookmark_file(self, file_path: str) -> List[str]:
+    def add_obsidian_tags(self, file_path: str, tags: List[str]):
         """
-        ブックマークファイルを処理してタグを生成
-        
-        Args:
-            file_path: ブックマークファイルのパス
-            
-        Returns:
-            生成されたタグのリスト
-        """
-        # キャッシュをチェック
-        if file_path in self.tags_cache:
-            print(f"キャッシュからタグを取得: {file_path}")
-            return self.tags_cache[file_path]
-        
-        # ファイル名からタイトルを抽出
-        file_name = os.path.basename(file_path)
-        title = file_name.replace('.md', '').replace('_', ' ')
-        
-        # コンテンツを抽出
-        content = self.extract_content_from_markdown(file_path)
-        
-        if not content:
-            print(f"コンテンツが空です: {file_path}")
-            return []
-        
-        # タグを生成
-        print(f"タグを生成中: {file_path}")
-        tags = self.generate_tags_with_openai(content, title)
-        
-        # キャッシュに保存
-        self.tags_cache[file_path] = tags
-        self._save_tags_cache()
-        
-        return tags
-    
-    def add_tags_to_markdown(self, file_path: str, tags: List[str]):
-        """
-        Markdownファイルにタグを追加
+        MarkdownファイルにObsidianプロパティ形式でタグを追加
         
         Args:
             file_path: ファイルパス
@@ -185,29 +154,77 @@ class BookmarkTagGenerator:
                 content = f.read()
             
             # 既存のタグ行を削除
-            content = re.sub(r'^tags:.*\n', '', content, flags=re.MULTILINE)
+            content = re.sub(r'^tags:\s*.*\n', '', content, flags=re.MULTILINE)
+            content = re.sub(r'\ntags:\s*.*(?:\n|$)', '', content)
             
-            # タグ行を追加（メタデータの後に）
+            # ファイル末尾のタグ行も削除
+            content = re.sub(r'\n\s*tags:.*$', '', content, flags=re.MULTILINE)
+            
             if tags:
-                tags_line = f"tags: {', '.join(tags)}\n"
+                # Obsidianプロパティ形式のタグを作成
+                tags_yaml = "---\ntags:\n"
+                for tag in tags:
+                    # #を除去してタグ名のみを取得
+                    tag_name = tag.replace('#', '').strip()
+                    tags_yaml += f"  - {tag_name}\n"
+                tags_yaml += "---\n\n"
                 
-                # メタデータの後に挿入
-                if '---' in content:
-                    parts = content.split('---', 2)
-                    if len(parts) >= 3:
-                        new_content = f"{parts[0]}---{parts[1]}---\n{tags_line}\n{parts[2]}"
-                    else:
-                        new_content = f"{content}\n{tags_line}"
-                else:
-                    new_content = f"{tags_line}\n{content}"
+                # ファイルの先頭に挿入
+                new_content = tags_yaml + content
                 
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.write(new_content)
                 
-                print(f"タグを追加しました: {file_path}")
+                print(f"Obsidianタグを追加しました: {file_path}")
+                print(f"追加されたタグ: {', '.join(tags)}")
+            else:
+                print(f"タグがありません: {file_path}")
             
         except Exception as e:
             print(f"タグ追加エラー {file_path}: {e}")
+    
+    def process_bookmark_file(self, file_path: str) -> List[str]:
+        """
+        ブックマークファイルを処理してタグを生成・追加
+        
+        Args:
+            file_path: ブックマークファイルのパス
+            
+        Returns:
+            生成されたタグのリスト
+        """
+        # キャッシュをチェック
+        if file_path in self.tags_cache:
+            print(f"キャッシュからタグを取得: {file_path}")
+            tags = self.tags_cache[file_path]
+        else:
+            # ファイル名からタイトルを抽出
+            file_name = os.path.basename(file_path)
+            title = file_name.replace('.md', '').replace('_', ' ')
+            
+            # コンテンツを抽出
+            content = self.extract_content_from_markdown(file_path)
+            
+            if not content:
+                print(f"コンテンツが空です: {file_path}")
+                return []
+            
+            # タグを生成
+            print(f"タグを生成中: {file_path}")
+            tags = self.generate_tags_with_openai(content, title)
+            
+            # キャッシュに保存
+            self.tags_cache[file_path] = tags
+            self._save_tags_cache()
+        
+        # Obsidianプロパティ形式でタグを追加
+        if tags:
+            self.add_obsidian_tags(file_path, tags)
+            print(f"生成されたタグ: {', '.join(tags)}")
+        else:
+            print("タグが生成されませんでした")
+        
+        return tags
     
     def process_bookmark_directory(self, directory_path: str):
         """
@@ -222,22 +239,53 @@ class BookmarkTagGenerator:
             print(f"ディレクトリが存在しません: {directory_path}")
             return
         
+        print(f"\n=== {directory_path} を処理中 ===")
+        
         # index.md以外のMarkdownファイルを処理
         for md_file in directory.glob("*.md"):
             if md_file.name == "index.md":
                 continue
             
             print(f"\n処理中: {md_file}")
-            tags = self.process_bookmark_file(str(md_file))
+            self.process_bookmark_file(str(md_file))
+    
+    def find_bookmark_directories(self, base_path: str = "bookmarks") -> List[str]:
+        """
+        bookmarksディレクトリ内のブックマークフォルダを検索
+        
+        Args:
+            base_path: 検索するベースパス
             
-            if tags:
-                self.add_tags_to_markdown(str(md_file), tags)
-                print(f"生成されたタグ: {', '.join(tags)}")
-            else:
-                print("タグが生成されませんでした")
+        Returns:
+            ブックマークディレクトリのリスト
+        """
+        bookmark_dirs = []
+        base_dir = Path(base_path)
+        
+        if not base_dir.exists():
+            print(f"ベースディレクトリが存在しません: {base_path}")
+            return bookmark_dirs
+        
+        # x-bookmarks-で始まるディレクトリを検索
+        for item in base_dir.iterdir():
+            if item.is_dir() and item.name.startswith("x-bookmarks-"):
+                bookmark_dirs.append(str(item))
+        
+        return sorted(bookmark_dirs)
 
 def main():
     """メイン関数"""
+    # コマンドライン引数の解析
+    parser = argparse.ArgumentParser(description='Xブックマークタグ自動生成・Obsidianプロパティ形式追加スクリプト')
+    parser.add_argument('--directory', '-d', type=str, 
+                       help='処理するブックマークディレクトリのパス（例: bookmarks/x-bookmarks-2025-01-27_new）')
+    parser.add_argument('--list', '-l', action='store_true',
+                       help='利用可能なブックマークディレクトリを一覧表示')
+    parser.add_argument('--all', '-a', action='store_true',
+                       help='すべてのブックマークディレクトリを処理')
+    
+    args = parser.parse_args()
+    
     # OpenAI APIキーを環境変数から取得
     api_key = os.getenv('OPENAI_API_KEY')
     if not api_key:
@@ -248,15 +296,44 @@ def main():
     # タグ生成器を初期化
     generator = BookmarkTagGenerator(api_key)
     
-    # ブックマークディレクトリを処理
-    bookmark_dirs = [
-        "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover",
-        "bookmarks/x-bookmarks-2025-07-23_ikokeba"
-    ]
+    # 利用可能なディレクトリを取得
+    available_dirs = generator.find_bookmark_directories()
     
-    for directory in bookmark_dirs:
-        print(f"\n=== {directory} を処理中 ===")
-        generator.process_bookmark_directory(directory)
+    if args.list:
+        print("利用可能なブックマークディレクトリ:")
+        for i, dir_path in enumerate(available_dirs, 1):
+            print(f"{i}. {dir_path}")
+        return
+    
+    if args.all:
+        # すべてのディレクトリを処理
+        if not available_dirs:
+            print("処理するブックマークディレクトリが見つかりません")
+            return
+        
+        print(f"すべてのディレクトリを処理します（{len(available_dirs)}個）")
+        for directory in available_dirs:
+            generator.process_bookmark_directory(directory)
+    
+    elif args.directory:
+        # 指定されたディレクトリを処理
+        if not os.path.exists(args.directory):
+            print(f"指定されたディレクトリが存在しません: {args.directory}")
+            return
+        
+        generator.process_bookmark_directory(args.directory)
+    
+    else:
+        # 引数が指定されていない場合はヘルプを表示
+        print("使用方法:")
+        print("  python tag_generator.py --list                    # 利用可能なディレクトリを一覧表示")
+        print("  python tag_generator.py --all                     # すべてのディレクトリを処理")
+        print("  python tag_generator.py --directory <path>        # 指定したディレクトリのみ処理")
+        print("  python tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new")
+        print("\n例:")
+        print("  python tag_generator.py --list")
+        print("  python tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new")
+        return
     
     print("\n=== 処理完了 ===")
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - データ可視化
+  - ydata-profiling
+  - チュートリアル
+  - ツール
+  - 探索的データ解析
+  - Python
+  - データ分析
+  - 統計解析
+  - データサイエンス
+  - ライブラリ
+---
+
 # タランチュラ | データサイエンティスト
 
 **Author:** @tarantula_ds_
@@ -23,7 +37,6 @@ ydata-profilingライブラリを使えばたった４行であらゆる探索�
 ![Image 1](https://pbs.twimg.com/media/GdX24wqbIAAJff5?format=jpg&name=900x900)
 
 ---
-tags: #データ可視化, #ydata-profiling, #チュートリアル, #ツール, #探索的データ解析, #Python, #データ分析, #統計解析, #データサイエンス, #ライブラリ
 
 
 

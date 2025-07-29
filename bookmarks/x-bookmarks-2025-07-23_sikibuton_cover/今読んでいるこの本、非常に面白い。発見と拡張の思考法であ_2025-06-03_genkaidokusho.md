@@ -1,3 +1,17 @@
+---
+tags:
+  - 思考法
+  - 読書
+  - 仮説
+  - 自己啓発
+  - 推論
+  - 哲学
+  - ロジック
+  - 知識拡張
+  - 教育
+  - アブダクション
+---
+
 # 限界読書
 
 **Author:** @genkaidokusho
@@ -19,7 +33,6 @@
 ![Image 1](https://pbs.twimg.com/media/GshOUDyb0AETsh6?format=jpg&name=900x900)
 
 ---
-tags: #思考法, #読書, #仮説, #自己啓発, #推論, #哲学, #ロジック, #知識拡張, #教育, #アブダクション
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - CLI
+  - チュートリアル
+  - ツール
+  - GeminiCLI
+  - AI
+  - 開発
+  - 自動化
+  - ドキュメント
+  - 技術解説
+  - プログラミング
+---
+
 # カレーちゃん
 
 **Author:** @currypurin
@@ -20,7 +34,6 @@ GeminiCLIの基礎と、色々な自動化を紹介 | ドクセル https://docsw
 - [From docswell.com](https://t.co/GKX7SmoimL)
 
 ---
-tags: #CLI, #チュートリアル, #ツール, #GeminiCLI, #AI, #開発, #自動化, #ドキュメント, #技術解説, #プログラミング
 
 
 

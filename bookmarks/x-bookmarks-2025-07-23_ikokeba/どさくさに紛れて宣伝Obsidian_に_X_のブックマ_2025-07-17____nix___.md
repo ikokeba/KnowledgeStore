@@ -1,3 +1,17 @@
+---
+tags:
+  - 生産性
+  - プラグイン
+  - ブックマーク
+  - JavaScript
+  - ツール
+  - Markdown
+  - 開発者向け
+  - Web開発
+  - Chrome拡張
+  - Obsidian
+---
+
 # にっくす
 
 **Author:** @___nix___
@@ -24,7 +38,6 @@ https://chromewebstore.google.com/detail/x-bookmarks-to-markdown/jefnahfckkljhcp
 - [https://chromewebstore.google.com/detail/x-bookmarks-to-markdown/jefnahfckkljhcpmlkbknjbfmcnopmlg?authuser=0&hl=ja…](https://t.co/wW3HztANK7)
 
 ---
-tags: #生産性, #プラグイン, #ブックマーク, #JavaScript, #ツール, #Markdown, #開発者向け, #Web開発, #Chrome拡張, #Obsidian
 
 
 

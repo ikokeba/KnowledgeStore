@@ -1,3 +1,17 @@
+---
+tags:
+  - オンラインイベント
+  - マーケティング
+  - プレゼンテーション
+  - 資料共有
+  - Notion
+  - ツール
+  - AI
+  - デジタルマーケティング
+  - ナレッジマネジメント
+  - コンテンツ制作
+---
+
 # あやみ｜マーケティング
 
 **Author:** @ayami_marketing
@@ -18,7 +32,6 @@ https://notion.notion.site/AI-Notion-223efdeead05807396eac116cb187e49?source=cop
 ![Image 1](https://pbs.twimg.com/media/Gu2quRPXUAA2HTv?format=jpg&name=900x900)
 
 ---
-tags: #オンラインイベント, #マーケティング, #プレゼンテーション, #資料共有, #Notion, #ツール, #AI, #デジタルマーケティング, #ナレッジマネジメント, #コンテンツ制作
 
 
 

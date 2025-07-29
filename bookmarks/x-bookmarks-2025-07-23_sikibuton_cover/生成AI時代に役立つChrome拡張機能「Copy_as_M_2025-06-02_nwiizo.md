@@ -1,3 +1,17 @@
+---
+tags:
+  - プロンプト作成
+  - 効率化
+  - Markdown
+  - ツール
+  - メモ取り
+  - AI
+  - 文書作成
+  - Web開発
+  - ブログ執筆
+  - Chrome拡張
+---
+
 # nwiizo
 
 **Author:** @nwiizo
@@ -15,7 +29,6 @@
 - [chromewebstore.google.comCopy as Markdown - Chrome Web StoreCopy Link or Image as Markdown code](https://t.co/ChhvCFNIDS)
 
 ---
-tags: #プロンプト作成, #効率化, #Markdown, #ツール, #メモ取り, #AI, #文書作成, #Web開発, #ブログ執筆, #Chrome拡張
 
 
 

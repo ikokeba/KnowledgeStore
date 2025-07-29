@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - ツール
+  - 記事
+  - Python
+  - AI
+  - モデル選定
+  - 機械学習
+  - データサイエンス
+  - lazypredict
+  - ライブラリ
+---
+
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg
@@ -16,7 +30,6 @@ lazypredictを使うと、主要な機械学習モデルをまとめて試せま
 ![Image 1](https://pbs.twimg.com/media/GwOLL4nWYAABExA?format=jpg&name=900x900)
 
 ---
-tags: #チュートリアル, #ツール, #記事, #Python, #AI, #モデル選定, #機械学習, #データサイエンス, #lazypredict, #ライブラリ
 
 
 

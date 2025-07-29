@@ -1,3 +1,17 @@
+---
+tags:
+  - チュートリアル
+  - Supabase
+  - ツール
+  - デプロイ
+  - AI
+  - CloudRun
+  - Web開発
+  - GitHub
+  - ランニングコスト
+  - Dify
+---
+
 # ふぁど｜なんでもやるCTO
 
 **Author:** @fadysan_rh
@@ -27,7 +41,6 @@ Cloud Runにデプロイ
 ランニングコストがタダでスタートできる。
 
 ---
-tags: #チュートリアル, #Supabase, #ツール, #デプロイ, #AI, #CloudRun, #Web開発, #GitHub, #ランニングコスト, #Dify
 
 
 

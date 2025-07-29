@@ -1,3 +1,17 @@
+---
+tags:
+  - Gemini
+  - GoogleAI
+  - ツール
+  - AI
+  - Web開発
+  - 技術記事
+  - 機械学習
+  - データサイエンス
+  - Chrome拡張
+  - 会話システム
+---
+
 # maguro
 
 **Author:** @yusuktan
@@ -16,7 +30,6 @@
 ![Image 1](https://pbs.twimg.com/media/GrgzQBVbUAAoSsF?format=jpg&name=900x900)
 
 ---
-tags: #Gemini, #GoogleAI, #ツール, #AI, #Web開発, #技術記事, #機械学習, #データサイエンス, #Chrome拡張, #会話システム
 
 
 

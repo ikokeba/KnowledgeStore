@@ -1,3 +1,17 @@
+---
+tags:
+  - データサイエンス
+  - チュートリアル
+  - 講義資料
+  - Transformer
+  - Python
+  - 拡散モデル
+  - AI
+  - 最尤推定
+  - 機械学習
+  - 生成モデル
+---
+
 # Hiroshi Takahashi
 
 **Author:** @taka8hiroshi
@@ -16,7 +30,6 @@
 - [speakerdeck.comから](https://t.co/B44cpwwXTJ)
 
 ---
-tags: #データサイエンス, #チュートリアル, #講義資料, #Transformer, #Python, #拡散モデル, #AI, #最尤推定, #機械学習, #生成モデル
 
 
 

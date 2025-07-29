@@ -1,3 +1,17 @@
+---
+tags:
+  - 3Dデザイン
+  - チュートリアル
+  - ChatGPT
+  - JavaScript
+  - ツール
+  - グラフィックス
+  - AI
+  - Web開発
+  - アイコンデザイン
+  - 技術記事
+---
+
 # Tran Mau Tri Tam ✪
 
 **Author:** @tranmautritam
@@ -21,7 +35,6 @@ How to render 3D Icons with ChatGPT-4o? Prompt
 ![Image 4](https://pbs.twimg.com/media/GwNTt17XcAArngk?format=jpg&name=360x360)
 
 ---
-tags: #3Dデザイン, #チュートリアル, #ChatGPT, #JavaScript, #ツール, #グラフィックス, #AI, #Web開発, #アイコンデザイン, #技術記事
 
 
 

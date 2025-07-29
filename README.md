@@ -48,21 +48,39 @@ $env:OPENAI_API_KEY='your-openai-api-key'
 
 ## 📖 使用方法
 
-### 既存ブックマークフォルダの処理
+### 利用可能なディレクトリの確認
 
 ```bash
 cd _scripts
-python tag_generator.py
+python tag_generator.py --list
+```
+
+### 指定したディレクトリのみタグ生成
+
+```bash
+cd _scripts
+python tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new
+```
+
+### すべてのディレクトリをタグ生成
+
+```bash
+cd _scripts
+python tag_generator.py --all
+```
+
+### タグ生成・Obsidianプロパティ形式追加（一括処理）
+
+```bash
+cd _scripts
+# 指定したディレクトリのみ（タグ生成→Obsidian形式追加を一括実行）
+python tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new
+
+# すべてのディレクトリ（タグ生成→Obsidian形式追加を一括実行）
+python tag_generator.py --all
 ```
 
 ### 新規ブックマークフォルダの処理
-
-```bash
-cd _scripts
-python process_new_folders.py
-```
-
-### 処理状況の確認
 
 ```bash
 cd _scripts

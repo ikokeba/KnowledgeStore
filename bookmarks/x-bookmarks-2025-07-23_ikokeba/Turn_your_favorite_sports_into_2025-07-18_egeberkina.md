@@ -1,3 +1,17 @@
+---
+tags:
+  - 3Dデザイン
+  - GPT-4
+  - インタラクティブデザイン
+  - チュートリアル
+  - ゲーム開発
+  - ツール
+  - アート
+  - AI
+  - JSON
+  - プログラミング
+---
+
 # Ege
 
 **Author:** @egeberkina
@@ -29,7 +43,6 @@ Prompt
 ![Image 7](https://pbs.twimg.com/media/GwI_8dbX0AAVgMc?format=jpg&name=120x120)
 
 ---
-tags: #3Dデザイン, #GPT-4, #インタラクティブデザイン, #チュートリアル, #ゲーム開発, #ツール, #アート, #AI, #JSON, #プログラミング
 
 
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - ベータ版
+  - チュートリアル
+  - API
+  - ツール
+  - Grok
+  - AI
+  - リアルタイムデータ
+  - Web開発
+  - xAI
+  - データサイエンス
+---
+
 # xAI
 
 **Author:** @xai
@@ -23,7 +37,6 @@ The Live Search API is now FREE in beta for a limited time. Start building here:
 - [https://docs.x.ai/docs/guides/live-search…](https://t.co/Yfmhe49Yh4)
 
 ---
-tags: #ベータ版, #チュートリアル, #API, #ツール, #Grok, #AI, #リアルタイムデータ, #Web開発, #xAI, #データサイエンス
 
 
 
