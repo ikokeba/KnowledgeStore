@@ -11,10 +11,14 @@
             "id": "4b9023957ca7253c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "グラフビュー"
+              "type": "markdown",
+              "state": {
+                "file": "bookmarks/x-bookmarks-2025-07-28/Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyo"
             }
           }
         ]
@@ -49,10 +53,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Obsidian",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               },
@@ -70,11 +74,12 @@
               "title": "ブックマーク"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 483.5
   },
   "right": {
     "id": "16a46adbfba83975",
@@ -90,6 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "bookmarks/x-bookmarks-2025-07-28/Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "バックリンク"
+              "title": "Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyoへのバックリンク"
             }
           },
           {
@@ -108,11 +114,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "bookmarks/x-bookmarks-2025-07-28/Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "アウトゴーイングリンク"
+              "title": "Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyoからのアウトゴーイングリンク"
             }
           },
           {
@@ -136,12 +143,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "bookmarks/x-bookmarks-2025-07-28/Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "アウトライン"
+              "title": "Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyoのアウトライン"
             }
           },
           {
@@ -177,6 +185,16 @@
   },
   "active": "4b9023957ca7253c",
   "lastOpenFiles": [
+    "Xブックマーク管理サマリー.md",
+    "bookmarks/x-bookmarks-2025-07-28/「個人開発_完全ガイド」を教えてもらったんだけどめっちゃ良い_2025-07-19_MLBear2.md",
+    "bookmarks/x-bookmarks-2025-07-28/データ構造が複雑になるほど対策なしでは分析精度を高くすること_2025-07-25_light940.md",
+    "bookmarks/x-bookmarks-2025-07-28/ｽｯつ_「Webサービス公開前のチェックリスト」_2025-07-25_catnose99.md",
+    "bookmarks/x-bookmarks-2025-07-23_ikokeba/Claude_Codeを手元のDocker環境で動かすための_2025-07-21_matsuu.md",
+    "javascript/all_tags.js",
+    "javascript/popular_tags.js",
+    "javascript/bookmark_tags.js",
+    "javascript",
+    "bookmarks/x-bookmarks-2025-07-23_ikokeba/[入門]_PythonでuvとPEP_723を使うと開発体験_2025-06-29_gomafreeeeeedom.md",
     "bookmarks/x-bookmarks-2025-07-29/ｽｯつ_「Webサービス公開前のチェックリスト」_2025-07-25_catnose99.md",
     "bookmarks/x-bookmarks-2025-07-29/遅くなりましたが、設計ナイト2025の発表資料アップしました_2025-07-28__pochi.md",
     "bookmarks/x-bookmarks-2025-07-29/データ構造が複雑になるほど対策なしでは分析精度を高くすること_2025-07-25_light940.md",
@@ -197,13 +215,7 @@
     "bookmarks/x-bookmarks-2025-07-29/Cursor、Windsurf_などで使える_CodeRab_2025-07-25_kinopee_ai.md",
     "bookmarks/x-bookmarks-2025-07-29/AI_framework_for_semantic_sear_2025-07-25_tom_doerr.md",
     "bookmarks/x-bookmarks-2025-07-29/1._NotebookLMが「Featured_Notebo_2025-07-20_kosuke_agos.md",
-    "bookmarks/x-bookmarks-2025-07-29/3D_Store_Displays_by_GPT-4oP_2025-07-27_TechieBySA.md",
     "bookmarks/x-bookmarks-2025-07-29",
-    "bookmarks/x-bookmarks-2025-07-28/Minecraft_Countries_by_GPT-4o_2025-07-26_TechieBySA.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/Easily_add_fun_line-drawn_peop_2025-07-20_egeberkina.md",
-    "bookmarks/x-bookmarks-2025-07-28/3D_Logo_Renders_by_GPT-4oPro_2025-07-25_TechieBySA.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/鏡を使った、少数カメラPhotogrammetry3DGS_2025-07-03_SHIGE_3DSCAN.md",
-    "bookmarks/x-bookmarks-2025-07-28/Since_Midjourney_announced_tha_2025-07-25_egeberkina.md",
     "bookmarks/x-bookmarks-2025-07-28",
     "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover_backup_20250729_120409",
     "_scripts/add_obsidian_tags.py"
