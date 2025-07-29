@@ -1,0 +1,36 @@
+# Python開発ルール
+
+## コーディング規約
+1. **日本語コメント**: 主要な処理や分岐には日本語でコメントを記載
+2. **関数説明**: 各関数の冒頭に機能説明を記載
+3. **エラーハンドリング**: OpenAI API呼び出し時は適切なエラーハンドリングを実装
+4. **ログ記録**: 重要な処理は[log.md](mdc:log.md)に記録
+
+## 主要スクリプト
+
+### [tag_generator.py](mdc:_scripts/tag_generator.py)
+- **機能**: タグ生成とObsidianプロパティ形式追加を一括実行
+- **引数**: `--directory`, `--list`, `--all`
+- **出力**: YAML frontmatter形式のタグ（`tags: - tag_name`）
+- **キャッシュ**: `bookmark_tags_cache.json`でAPI呼び出しを最適化
+
+### [process_new_folders.py](mdc:_scripts/process_new_folders.py)
+- **機能**: 新規ブックマークフォルダの自動検出と処理
+- **検出条件**: `bookmarks/x-bookmarks-*`パターン
+- **記録**: `processed_folders.json`で処理済みフォルダを管理
+
+## 依存関係
+- OpenAI API: タグ生成に使用
+- pathlib: ファイルシステム操作
+- argparse: コマンドライン引数処理
+- json: キャッシュと設定ファイル処理
+
+## 開発時の注意点
+1. **API制限**: OpenAI APIの使用量と制限に注意
+2. **ファイル形式**: MarkdownファイルのYAML frontmatter形式を維持
+3. **パス処理**: Windows環境でのパス区切り文字に注意
+4. **エンコーディング**: UTF-8でファイルを処理
+description:
+globs:
+alwaysApply: false
+---

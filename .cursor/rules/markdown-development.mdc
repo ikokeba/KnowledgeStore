@@ -1,0 +1,57 @@
+# Obsidian Markdown開発ルール
+
+## Obsidianプロパティ形式（YAML frontmatter）
+```yaml
+---
+tags:
+  - tag_name1
+  - tag_name2
+---
+```
+
+## 主要Markdownファイル
+
+### [X_bookmarks_summary.md](mdc:X_bookmarks_summary.md)
+- **機能**: メインのサマリーページ
+- **DataviewJS呼び出し**: `await dv.view("javascript/filename", dv.current());`
+- **外部JS参照**: `javascript/`フォルダ内のJSファイルを呼び出し
+- **表示内容**: タグ別表示、人気タグ、全タグ一覧
+
+### [README.md](mdc:README.md)
+- **機能**: プロジェクトドキュメント
+- **更新**: システム変更時は必ず更新
+- **内容**: セットアップ、使用方法、カスタマイズ方法
+
+### [log.md](mdc:log.md)
+- **機能**: 開発ログ
+- **記録**: 新機能追加、バグ修正、重要な変更
+- **形式**: `===YYYY-MM-DD===`で日付区切り
+
+## Obsidian DataviewJS構文
+```markdown
+```dataviewjs
+await dv.view("javascript/bookmark_tags", dv.current());
+```
+```
+
+## ファイル命名規則
+1. **日本語可**: ファイル名に日本語を使用可能
+2. **スペース**: 半角スペースは避け、アンダースコア（_）を使用
+3. **日付**: YYYYMMDD形式で日付を含める
+4. **一貫性**: プロジェクト内で命名規則を統一
+
+## 開発時の注意点
+1. **YAML形式**: タグは`#`プレフィックスなしで記述
+2. **リンク形式**: Obsidian内部リンク`[[ファイル名]]`を使用
+3. **DataviewJS**: 外部JSファイルは`javascript/`フォルダに配置
+4. **絵文字**: 視覚的な区別のために絵文字を使用
+5. **階層構造**: 見出しレベルで情報を整理
+
+## カスタマイズ方法
+- **タグ追加**: YAML frontmatterの`tags`配列に追加
+- **表示変更**: JavaScriptファイルを修正
+- **スタイル変更**: Obsidian標準の表示方法を使用
+description:
+globs:
+alwaysApply: false
+---

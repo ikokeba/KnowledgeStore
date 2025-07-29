@@ -1,0 +1,84 @@
+# Xブックマーク管理システム - ワークフローガイド
+
+## 新規ブックマークフォルダ追加時のワークフロー
+
+### 1. フォルダ配置
+```
+bookmarks/x-bookmarks-YYYY-MM-DD_username/
+├── index.md
+└── [ブックマークファイル].md
+```
+
+### 2. 自動処理
+```bash
+cd _scripts
+python process_new_folders.py
+```
+
+### 3. 手動処理（必要時）
+```bash
+cd _scripts
+python tag_generator.py -d bookmarks/x-bookmarks-YYYY-MM-DD_username
+```
+
+## 既存フォルダの再処理
+
+### 全フォルダ処理
+```bash
+cd _scripts
+python tag_generator.py --all
+```
+
+### 特定フォルダ処理
+```bash
+cd _scripts
+python tag_generator.py -d bookmarks/x-bookmarks-YYYY-MM-DD_username
+```
+
+## 開発・修正時のワークフロー
+
+### 1. 機能追加時
+1. [log.md](mdc:log.md)に作業内容を記録
+2. コード実装
+3. [README.md](mdc:README.md)を更新
+4. テスト実行
+
+### 2. バグ修正時
+1. [log.md](mdc:log.md)に問題を記録
+2. 修正実装
+3. 動作確認
+4. [log.md](mdc:log.md)に修正内容を記録
+
+### 3. JavaScript修正時
+1. [javascript/](mdc:javascript/)内の該当ファイルを修正
+2. Obsidianで[X_bookmarks_summary.md](mdc:X_bookmarks_summary.md)を確認
+3. デバッグ情報を`console.log()`で確認
+
+## 環境設定
+
+### OpenAI API設定
+```powershell
+$env:OPENAI_API_KEY='your-openai-api-key'
+```
+
+### 依存関係インストール
+```bash
+pip install -r requirements.txt
+```
+
+## トラブルシューティング
+
+### よくある問題
+1. **リンクがクリックできない**: `p.file.link`を使用しているか確認
+2. **タグが表示されない**: YAML frontmatter形式を確認
+3. **API呼び出しエラー**: 環境変数とAPI制限を確認
+4. **ファイルが見つからない**: パスとファイル名を確認
+
+### デバッグ方法
+1. **Python**: `print()`文でデバッグ情報を出力
+2. **JavaScript**: `console.log()`でデータ取得状況を確認
+3. **Obsidian**: 開発者ツールでコンソールを確認
+description:
+globs:
+alwaysApply: false
+---

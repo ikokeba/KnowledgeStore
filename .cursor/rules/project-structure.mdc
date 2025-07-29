@@ -1,0 +1,31 @@
+# Xブックマーク管理システム - プロジェクト構造ガイド
+
+## プロジェクト概要
+このプロジェクトは、XのブックマークをObsidianで管理し、AIによる自動タグ生成とDataviewJSによる動的表示を実現するシステムです。
+
+## 主要ファイル構造
+
+### スクリプトファイル
+- [_scripts/tag_generator.py](mdc:_scripts/tag_generator.py) - メインのタグ生成・Obsidian形式追加スクリプト
+- [_scripts/process_new_folders.py](mdc:_scripts/process_new_folders.py) - 新規フォルダ処理スクリプト
+
+### Obsidian表示用ファイル
+- [X_bookmarks_summary.md](mdc:X_bookmarks_summary.md) - メインのサマリーページ（DataviewJS呼び出し）
+- [javascript/bookmark_tags.js](mdc:javascript/bookmark_tags.js) - タグ別表示用JavaScript
+- [javascript/popular_tags.js](mdc:javascript/popular_tags.js) - 人気タグ表示用JavaScript
+- [javascript/all_tags.js](mdc:javascript/all_tags.js) - 全タグ一覧表示用JavaScript
+
+### 設定・ドキュメントファイル
+- [README.md](mdc:README.md) - プロジェクトドキュメント
+- [log.md](mdc:log.md) - 開発ログ
+- [requirements.txt](mdc:requirements.txt) - Python依存関係
+
+## 開発ルール
+1. 新しい機能追加時は必ず[log.md](mdc:log.md)に記録
+2. JavaScriptファイルの修正時は、ObsidianのDataviewJS互換性を確認
+3. タグ生成スクリプトの修正時は、YAML frontmatter形式を維持
+4. 新規フォルダ追加時は、[process_new_folders.py](mdc:_scripts/process_new_folders.py)で自動検出
+description:
+globs:
+alwaysApply: false
+---

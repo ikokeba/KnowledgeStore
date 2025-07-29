@@ -1,0 +1,56 @@
+# DataviewJS開発ルール
+
+## Obsidian DataviewJS規約
+1. **dvオブジェクト**: ObsidianのDataviewJS APIを使用
+2. **ファイル参照**: `p.file.link`でObsidian内部リンクを生成
+3. **タグ処理**: YAML frontmatterの`tags`配列を直接参照
+4. **デバッグ**: `console.log()`でデータ取得状況を確認
+
+## 主要JavaScriptファイル
+
+### [bookmark_tags.js](mdc:javascript/bookmark_tags.js)
+- **機能**: タグ別のブックマーク表示
+- **表示順序**: 技術スタックタグ → 分野タグ → 用途タグ → その他
+- **絵文字**: 🔧（カテゴリ）、🏷️（タグ）
+- **自動分類**: `categorizeTag()`関数でタグを自動カテゴリ分け
+
+### [popular_tags.js](mdc:javascript/popular_tags.js)
+- **機能**: 人気タグランキング（上位10件）
+- **表示形式**: テーブル形式（タグ名、件数）
+- **ソート**: 件数の降順
+
+### [all_tags.js](mdc:javascript/all_tags.js)
+- **機能**: 全タグ一覧表示
+- **表示形式**: テーブル形式（タグ名、件数）
+- **ソート**: 件数の降順
+
+## DataviewJS API使用例
+```javascript
+// ページ取得
+const bookmarks = dv.pages('"bookmarks"').where(p => p.tags && p.file.name !== "index");
+
+// リンク生成
+dv.list(bookmarks.file.link);
+
+// 見出し表示
+dv.header(3, "カテゴリ名");
+
+// テーブル表示
+dv.table(["タグ", "件数"], data);
+```
+
+## 開発時の注意点
+1. **タグ形式**: YAML frontmatterの`tags`は`#`プレフィックスなし
+2. **ファイルパス**: `bookmarks/x-bookmarks-*`パターンで検索
+3. **リンク形式**: `p.file.link`でObsidian内部リンクを生成
+4. **デバッグ**: データ取得状況を`console.log()`で確認
+5. **外部参照**: [X_bookmarks_summary.md](mdc:X_bookmarks_summary.md)から`dv.view()`で呼び出し
+
+## カスタマイズ方法
+- **タグカテゴリ追加**: `categorizeTag()`関数を修正
+- **表示順序変更**: `tagCategories`オブジェクトの順序を変更
+- **スタイル変更**: CSSクラスではなく、Obsidian標準の表示方法を使用
+description:
+globs:
+alwaysApply: false
+---
