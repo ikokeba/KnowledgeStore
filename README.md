@@ -21,16 +21,24 @@ X_bookmarks/
 ├── bookmarks/                    # ブックマークファイル格納
 │   ├── x-bookmarks-2025-07-23_sikibuton_cover/
 │   └── x-bookmarks-2025-07-23_ikokeba/
-├── _scripts/                     # スクリプトファイル
-│   ├── tag_generator.py         # タグ自動生成・Obsidian形式追加スクリプト
-│   ├── process_new_folders.py   # 新規フォルダ処理スクリプト
+├── _scripts/                     # 本番用スクリプトファイル
+│   ├── tag_generator.py         # タグ自動生成・Obsidian形式追加スクリプト（メイン）
+│   └── process_new_folders.py   # 新規フォルダ処理スクリプト
+├── _tests/                       # テスト用スクリプトファイル
 │   ├── test_system.py           # システムテストスクリプト
+│   ├── simple_watercrawl_test.py # WaterCrawl単体テスト（Markdown保存機能付き）
+│   ├── test_watercrawl_qiita.py # WaterCrawl Qiitaテスト
+│   ├── test_watercrawl_final.py # WaterCrawl最終テスト
+│   ├── test_watercrawl_correct.py # WaterCrawl正しいパラメータテスト
+│   ├── test_watercrawl_alternative.py # WaterCrawl代替テスト
+│   ├── debug_watercrawl.py      # WaterCrawlデバッグスクリプト
 │   └── example_watercrawl_usage.py # WaterCrawl使用例スクリプト
 ├── javascript/                   # DataviewJS用JavaScriptファイル
 │   ├── bookmark_tags.js         # タグ別表示用JS
 │   ├── popular_tags.js          # 人気タグ表示用JS
 │   └── all_tags.js              # 全タグ一覧表示用JS
 ├── _templates/                   # テンプレートファイル
+├── watercrawl_output/           # WaterCrawlテスト用出力ディレクトリ
 ├── X_bookmarks_summary.md       # Obsidian用サマリーページ
 ├── requirements.txt             # Python依存関係
 ├── README.md                    # このファイル
@@ -67,46 +75,71 @@ $env:WATERCRAWL_API_KEY='your-watercrawl-api-key'
 
 ## 📖 使用方法
 
-### 利用可能なディレクトリの確認
+### 🎯 本番用スクリプト（タグ管理用）
+
+#### 利用可能なディレクトリの確認
 
 ```bash
 cd _scripts
 python tag_generator.py --list
 ```
 
-### 指定したディレクトリのみタグ生成・Obsidian形式追加
+#### 指定したディレクトリのみタグ生成・Obsidian形式追加
 
 ```bash
 cd _scripts
 python tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new
 ```
 
-### すべてのディレクトリをタグ生成・Obsidian形式追加
+#### すべてのディレクトリをタグ生成・Obsidian形式追加
 
 ```bash
 cd _scripts
 python tag_generator.py --all
 ```
 
-### 新規ブックマークフォルダの処理
+#### 新規ブックマークフォルダの処理
 
 ```bash
 cd _scripts
 python process_new_folders.py
 ```
 
-### システムテストの実行
+### 🧪 テスト用スクリプト（開発・デバッグ用）
+
+#### システムテストの実行
 
 ```bash
-cd _scripts
+cd _tests
 python test_system.py
 ```
 
-### WaterCrawl機能のテスト
+#### WaterCrawl単体テスト（Markdown保存機能付き）
 
 ```bash
-cd _scripts
+cd _tests
+python simple_watercrawl_test.py
+```
+
+#### WaterCrawl機能のテスト
+
+```bash
+cd _tests
 python example_watercrawl_usage.py
+```
+
+#### WaterCrawl Qiitaテスト
+
+```bash
+cd _tests
+python test_watercrawl_qiita.py
+```
+
+#### WaterCrawlデバッグ
+
+```bash
+cd _tests
+python debug_watercrawl.py
 ```
 
 ## 🏷️ タグ体系
@@ -210,6 +243,26 @@ function categorizeTag(tag) {
 
 `_scripts/process_new_folders.py`の`find_new_bookmark_folders`メソッドで、フォルダ検出の条件を調整できます。
 
+## 🧪 テスト用スクリプトの説明
+
+### テスト用スクリプトの用途
+
+- **`test_system.py`**: システム全体の動作確認（依存関係、APIキー、ディレクトリ構造）
+- **`simple_watercrawl_test.py`**: WaterCrawl APIの単体テスト（Markdown保存機能付き）
+- **`test_watercrawl_qiita.py`**: QiitaサイトでのWaterCrawl動作確認
+- **`test_watercrawl_final.py`**: WaterCrawl APIの最終動作確認
+- **`test_watercrawl_correct.py`**: WaterCrawl APIの正しいパラメータ確認
+- **`test_watercrawl_alternative.py`**: WaterCrawl APIの代替使用方法確認
+- **`debug_watercrawl.py`**: WaterCrawl APIのデバッグ用
+- **`example_watercrawl_usage.py`**: WaterCrawl機能の使用例
+
+### テスト用スクリプトの実行タイミング
+
+- **初回セットアップ時**: `test_system.py`でシステム全体の動作確認
+- **WaterCrawl API設定時**: `simple_watercrawl_test.py`でAPI動作確認
+- **問題発生時**: 各デバッグスクリプトで詳細な調査
+- **機能確認時**: 各テストスクリプトで個別機能の動作確認
+
 ## 📝 ログ
 
 処理状況は`log.md`に記録されます。また、以下のファイルも生成されます：
@@ -226,6 +279,8 @@ function categorizeTag(tag) {
 5. **外部リンク処理**: 外部リンクの要約取得には時間がかかる場合があります
 6. **Obsidian DataviewJS**: DataviewJSプラグインが必要です
 7. **JavaScriptファイル**: `javascript/`フォルダ内のJSファイルは外部参照用です
+8. **スクリプトの使い分け**: 本番用は`_scripts/`、テスト用は`_tests/`ディレクトリを使用してください
+9. **テスト用スクリプト**: 開発・デバッグ時以外は使用しないでください
 
 ## 🤝 貢献
 

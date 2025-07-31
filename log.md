@@ -303,4 +303,33 @@ APIキーの権限不足またはアカウント制限の可能性が高い。Wa
 **注意事項**:
 - ファイル名は安全な文字のみ使用
 - 重複ファイル名の処理
-- 保存先ディレクトリの自動作成 
+- 保存先ディレクトリの自動作成
+
+### スクリプト整理・ディレクトリ分離
+
+**目的**: タグ管理時の混乱を防ぐため、本番用スクリプトとテスト用スクリプトを明確に分離
+
+**実装内容**:
+- `_tests/`ディレクトリを新規作成
+- テスト用スクリプトを`_scripts/`から`_tests/`に移動
+- README.mdに本番用とテスト用スクリプトの使い分けを明記
+
+**移動したテスト用スクリプト**:
+- `test_system.py`: システム全体テスト
+- `simple_watercrawl_test.py`: WaterCrawl単体テスト（Markdown保存機能付き）
+- `test_watercrawl_qiita.py`: WaterCrawl Qiitaテスト
+- `test_watercrawl_final.py`: WaterCrawl最終テスト
+- `test_watercrawl_correct.py`: WaterCrawl正しいパラメータテスト
+- `test_watercrawl_alternative.py`: WaterCrawl代替テスト
+- `debug_watercrawl.py`: WaterCrawlデバッグスクリプト
+- `example_watercrawl_usage.py`: WaterCrawl使用例スクリプト
+
+**本番用スクリプト（`_scripts/`）**:
+- `tag_generator.py`: メインのタグ生成スクリプト
+- `process_new_folders.py`: 新規フォルダ処理スクリプト
+
+**README.md更新内容**:
+- ディレクトリ構造の明確化
+- 本番用とテスト用スクリプトの使用方法分離
+- テスト用スクリプトの詳細説明追加
+- 注意事項にスクリプト使い分けの説明追加 
