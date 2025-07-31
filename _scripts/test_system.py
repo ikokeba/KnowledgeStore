@@ -7,9 +7,12 @@ Xブックマーク管理システム テストスクリプト
 - システムの基本動作確認
 - ファイル構造の検証
 - 依存関係の確認
+- WaterCrawl API統合の確認
 
 作成日: 2025-07-28
 作成者: AI Assistant
+更新履歴:
+- 2025-01-27: WaterCrawl API統合テストを追加
 """
 
 import os
@@ -70,6 +73,13 @@ def test_dependencies():
         print("  実行: pip install openai")
     
     try:
+        import watercrawl
+        print("✓ watercrawl-pyライブラリが利用可能です")
+    except ImportError:
+        print("✗ watercrawl-pyライブラリがインストールされていません")
+        print("  実行: pip install watercrawl-py")
+    
+    try:
         from pathlib import Path
         print("✓ pathlibライブラリが利用可能です")
     except ImportError:
@@ -79,13 +89,63 @@ def test_environment_variables():
     """環境変数のテスト"""
     print("\n=== 環境変数テスト ===")
     
-    api_key = os.getenv('OPENAI_API_KEY')
-    if api_key:
+    openai_api_key = os.getenv('OPENAI_API_KEY')
+    if openai_api_key:
         print("✓ OPENAI_API_KEYが設定されています")
-        print(f"  キー: {api_key[:10]}...")
+        print(f"  キー: {openai_api_key[:10]}...")
     else:
         print("✗ OPENAI_API_KEYが設定されていません")
         print("  設定方法: $env:OPENAI_API_KEY='your-api-key'")
+    
+    watercrawl_api_key = os.getenv('WATERCRAWL_API_KEY')
+    if watercrawl_api_key:
+        print("✓ WATERCRAWL_API_KEYが設定されています")
+        print(f"  キー: {watercrawl_api_key[:10]}...")
+    else:
+        print("⚠ WATERCRAWL_API_KEYが設定されていません（外部リンク要約機能は無効）")
+        print("  設定方法: $env:WATERCRAWL_API_KEY='your-api-key'")
+
+def test_watercrawl_integration():
+    """WaterCrawl統合のテスト"""
+    print("\n=== WaterCrawl統合テスト ===")
+    
+    try:
+        from _scripts.tag_generator import BookmarkTagGenerator
+        
+        # テスト用のインスタンスを作成
+        test_generator = BookmarkTagGenerator("test_key", "test_watercrawl_key")
+        
+        # 外部リンク抽出機能のテスト
+        test_content = """
+        # テストコンテンツ
+        
+        これはテスト用のコンテンツです。
+        
+        [GitHub](https://github.com/example)
+        https://example.com
+        
+        ## Links
+        - [Example Link](https://example.org)
+        """
+        
+        external_links = test_generator.extract_external_links(test_content)
+        expected_links = [
+            "https://github.com/example",
+            "https://example.com", 
+            "https://example.org"
+        ]
+        
+        if set(external_links) == set(expected_links):
+            print("✓ 外部リンク抽出機能が正常に動作します")
+        else:
+            print(f"✗ 外部リンク抽出機能に問題があります")
+            print(f"  期待値: {expected_links}")
+            print(f"  実際値: {external_links}")
+        
+        print("✓ WaterCrawl統合クラスが正常に読み込まれます")
+        
+    except Exception as e:
+        print(f"✗ WaterCrawl統合テストでエラーが発生しました: {e}")
 
 def test_bookmark_files():
     """ブックマークファイルのテスト"""
@@ -125,6 +185,14 @@ def test_requirements_file():
             for line in content.strip().split('\n'):
                 if line.strip():
                     print(f"    {line}")
+        
+        # 必要な依存関係の確認
+        required_deps = ["openai", "watercrawl-py"]
+        for dep in required_deps:
+            if dep in content:
+                print(f"  ✓ {dep}が含まれています")
+            else:
+                print(f"  ✗ {dep}が含まれていません")
     else:
         print("✗ requirements.txtが存在しません")
 
@@ -137,6 +205,7 @@ def main():
     test_script_files()
     test_dependencies()
     test_environment_variables()
+    test_watercrawl_integration()
     test_bookmark_files()
     test_requirements_file()
     
@@ -145,8 +214,9 @@ def main():
     
     print("\n次のステップ:")
     print("1. OpenAI APIキーを設定してください")
-    print("2. 依存関係をインストールしてください: pip install -r requirements.txt")
-    print("3. タグ生成を実行してください: python _scripts/tag_generator.py")
+    print("2. WaterCrawl APIキーを設定してください（オプション）")
+    print("3. 依存関係をインストールしてください: pip install -r requirements.txt")
+    print("4. タグ生成を実行してください: python _scripts/tag_generator.py")
 
 if __name__ == "__main__":
     main() 

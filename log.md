@@ -144,4 +144,163 @@ python _scripts/tag_generator.py --all
 
 **次のステップ**:
 1. 統合スクリプトの動作確認
-2. 新規フォルダでの一括処理テスト 
+2. 新規フォルダでの一括処理テスト
+
+## ===2025-01-27===
+
+### WaterCrawl API統合・外部リンク要約機能の実装
+
+**目的**: タグを付与する前に、ページに外部リンクがある場合はWaterCrawl APIを使用してその外部リンクの要約をページ下部に付与
+
+**実装内容**:
+- `tag_generator.py`にWaterCrawl API統合機能を追加
+- 外部リンク抽出機能の実装
+- 外部リンク要約取得機能の実装（watercrawl-pyライブラリ使用）
+- 要約をMarkdownファイルに追加する機能の実装
+- `watercrawl-py`ライブラリを依存関係に追加
+
+**新機能**:
+1. **外部リンク抽出**: Markdownコンテンツから外部リンク（Markdown形式・プレーンテキストURL）を自動抽出
+2. **WaterCrawl API統合**: 外部リンクの要約をWaterCrawl APIで取得
+3. **要約セクション追加**: ファイル末尾に「External Link Summaries」セクションを自動追加
+4. **環境変数対応**: `WATERCRAWL_API_KEY`環境変数でAPIキーを設定
+
+**処理フロー**:
+1. Markdownファイルからコンテンツを抽出
+2. 外部リンクを検出
+3. WaterCrawl APIで各リンクの要約を取得
+4. ファイル末尾に要約セクションを追加
+5. タグ生成・Obsidian形式追加を実行
+
+**追加されたファイル**:
+- `_scripts/example_watercrawl_usage.py`: WaterCrawl機能の使用例スクリプト
+- `requirements.txt`に`watercrawl-py>=0.7.1`を追加
+
+**更新されたファイル**:
+- `_scripts/tag_generator.py`: WaterCrawl統合機能を追加
+- `_scripts/test_system.py`: WaterCrawl統合テストを追加
+- `README.md`: WaterCrawl機能の説明を追加
+
+**使用方法**:
+```bash
+# 環境変数設定
+$env:WATERCRAWL_API_KEY='your-watercrawl-api-key'
+
+# 通常のタグ生成（外部リンク要約機能付き）
+python _scripts/tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new
+
+# WaterCrawl機能のテスト
+python _scripts/example_watercrawl_usage.py
+```
+
+**生成される形式**:
+```markdown
+## External Link Summaries
+
+### https://example.com
+このページは技術的な内容を含んでおり、開発者向けの情報を提供しています。
+
+### https://docs.example.com
+公式ドキュメントでは、APIの使用方法とサンプルコードが詳しく説明されています。
+```
+
+**次のステップ**:
+1. WaterCrawl APIキーの取得・設定
+2. watercrawl-pyライブラリのインストール（pip install watercrawl-py）
+3. 外部リンク要約機能の動作確認
+4. 処理速度の最適化（必要に応じて） 
+
+# 開発ログ
+
+## 2025-01-27
+
+### WaterCrawl API統合・外部リンク要約機能追加
+
+**目的**: ブックマークページに外部リンクがある場合、WaterCrawl APIを使用してその要約をページ下部に追加する機能を実装
+
+**実装内容**:
+- `watercrawl-py`ライブラリを使用したWaterCrawl API統合
+- 外部リンク抽出機能（Markdownリンク形式とプレーンテキストURL対応）
+- WaterCrawl APIを使用したURL要約取得機能
+- Markdownファイルへの要約追加機能
+
+**処理フロー**:
+1. Markdownファイルから外部リンクを抽出
+2. 各外部リンクに対してWaterCrawl APIで要約を取得
+3. 取得した要約を「## External Link Summaries」セクションとしてファイル末尾に追加
+4. タグ生成処理を実行（既存の要約セクションは除外）
+
+**影響ファイル**:
+- `_scripts/tag_generator.py`: メインのタグ生成スクリプト
+- `_scripts/test_system.py`: システムテストスクリプト
+- `_scripts/example_watercrawl_usage.py`: 使用例スクリプト
+- `_scripts/simple_watercrawl_test.py`: シンプルテストスクリプト
+- `requirements.txt`: 依存関係ファイル
+- `README.md`: ドキュメント更新
+
+**注意事項**:
+- WaterCrawl API使用料が発生する可能性があります
+- APIキーは環境変数`WATERCRAWL_API_KEY`で設定してください
+
+### WaterCrawl API 403エラー問題調査
+
+**問題**: `scrape_url`メソッドで403 Forbiddenエラーが発生
+
+**調査結果**:
+- APIキーは正常に設定されている（`wc-30wfoga...`）
+- クライアント初期化は成功
+- `scrape_url`メソッドは存在するが、403エラーが発生
+- `create_crawl_request`メソッドは`url`パラメータを使用（`urls`ではない）
+
+**考えられる原因**:
+1. APIキーの権限不足
+2. WaterCrawl APIの使用方法が間違っている
+3. アカウントの制限や制約
+
+**次のステップ**:
+- WaterCrawl公式ドキュメントの確認
+- 正しいAPI使用方法の調査
+- 代替的なアプローチの検討
+
+**作成したデバッグスクリプト**:
+- `_scripts/debug_watercrawl.py`: 基本的なデバッグ用
+- `_scripts/test_watercrawl_alternative.py`: 代替的な使用方法テスト
+- `_scripts/test_watercrawl_correct.py`: 正しいパラメータでのテスト
+- `_scripts/test_watercrawl_final.py`: 最終テスト（正しいシグネチャ確認済み）
+
+### WaterCrawl API 403エラー問題の詳細調査
+
+**調査結果**:
+- `scrape_url`メソッドの正しいシグネチャを確認: `(url: str, page_options: dict = None, plugin_options: dict = None, sync: bool = True, download: bool = True)`
+- `create_crawl_request`は`name`パラメータを受け付けない
+- `create_batch_crawl_request`も`name`パラメータを受け付けない
+- すべてのメソッドで403 Forbiddenエラーが発生
+
+**結論**:
+APIキーの権限不足またはアカウント制限の可能性が高い。WaterCrawlアカウントでの設定確認が必要。
+
+### WaterCrawl API 統合成功・Markdown保存機能追加
+
+**目的**: WaterCrawlで取得したMarkdownコンテンツをページタイトル名でファイル保存する機能を追加
+
+**実装内容**:
+- WaterCrawl APIの正常動作確認完了
+- 取得したMarkdownコンテンツをファイル保存機能を追加
+- ページタイトルをファイル名として使用
+- ファイル名の安全な処理（特殊文字除去、長さ制限等）
+
+**処理フロー**:
+1. WaterCrawl APIでURLからコンテンツを取得
+2. メタデータからタイトルを抽出
+3. タイトルを安全なファイル名に変換
+4. Markdownコンテンツをファイルとして保存
+
+**影響ファイル**:
+- `_scripts/simple_watercrawl_test.py`: Markdown保存機能追加
+- `_scripts/tag_generator.py`: Markdown保存機能統合
+- `_scripts/test_watercrawl_qiita.py`: Markdown保存機能追加
+
+**注意事項**:
+- ファイル名は安全な文字のみ使用
+- 重複ファイル名の処理
+- 保存先ディレクトリの自動作成 

@@ -10,6 +10,7 @@ XのブックマークをObsidianで管理し、分野・技術スタック・�
 - **技術スタック分類**: Python、JavaScript、Docker、Gitなどの技術タグ（優先表示）
 - **用途別分類**: チュートリアル、ツール、ライブラリ、記事などの用途タグ
 - **新規フォルダ自動検出**: 新しいブックマークフォルダを自動検出して処理
+- **外部リンク要約**: WaterCrawl公式Pythonクライアント（watercrawl-py）を使用して外部リンクの要約を自動取得
 - **Obsidian DataviewJS対応**: 動的なタグ別表示と検索機能
 - **スタイリッシュな表示**: 絵文字と階層構造で見やすい表示
 
@@ -22,7 +23,9 @@ X_bookmarks/
 │   └── x-bookmarks-2025-07-23_ikokeba/
 ├── _scripts/                     # スクリプトファイル
 │   ├── tag_generator.py         # タグ自動生成・Obsidian形式追加スクリプト
-│   └── process_new_folders.py   # 新規フォルダ処理スクリプト
+│   ├── process_new_folders.py   # 新規フォルダ処理スクリプト
+│   ├── test_system.py           # システムテストスクリプト
+│   └── example_watercrawl_usage.py # WaterCrawl使用例スクリプト
 ├── javascript/                   # DataviewJS用JavaScriptファイル
 │   ├── bookmark_tags.js         # タグ別表示用JS
 │   ├── popular_tags.js          # 人気タグ表示用JS
@@ -42,12 +45,22 @@ X_bookmarks/
 pip install -r requirements.txt
 ```
 
-### 2. OpenAI APIキーの設定
+### 2. APIキーの設定
+
+#### OpenAI APIキー（必須）
 
 PowerShellで環境変数を設定：
 
 ```powershell
 $env:OPENAI_API_KEY='your-openai-api-key'
+```
+
+#### WaterCrawl APIキー（オプション）
+
+外部リンク要約機能を使用する場合：
+
+```powershell
+$env:WATERCRAWL_API_KEY='your-watercrawl-api-key'
 ```
 
 または、システム環境変数として設定してください。
@@ -80,6 +93,20 @@ python tag_generator.py --all
 ```bash
 cd _scripts
 python process_new_folders.py
+```
+
+### システムテストの実行
+
+```bash
+cd _scripts
+python test_system.py
+```
+
+### WaterCrawl機能のテスト
+
+```bash
+cd _scripts
+python example_watercrawl_usage.py
 ```
 
 ## 🏷️ タグ体系
@@ -116,6 +143,20 @@ python process_new_folders.py
 - **タグ別表示**: 技術スタックタグを優先した階層表示
 - **人気タグランキング**: 上位10件のタグ
 - **全タグ一覧**: すべてのタグとその件数
+
+### 外部リンク要約の表示
+
+WaterCrawl APIキーが設定されている場合、ブックマークファイルに以下のセクションが自動追加されます：
+
+```markdown
+## External Link Summaries
+
+### https://example.com
+このページは技術的な内容を含んでおり、開発者向けの情報を提供しています。
+
+### https://docs.example.com
+公式ドキュメントでは、APIの使用方法とサンプルコードが詳しく説明されています。
+```
 
 ### DataviewJS機能
 
@@ -179,10 +220,12 @@ function categorizeTag(tag) {
 ## ⚠️ 注意事項
 
 1. **OpenAI API使用料**: タグ生成にはOpenAI APIを使用するため、使用料が発生します
-2. **API制限**: OpenAI APIの制限に注意してください
-3. **キャッシュ**: 一度生成したタグはキャッシュされるため、再処理時は高速です
-4. **Obsidian DataviewJS**: DataviewJSプラグインが必要です
-5. **JavaScriptファイル**: `javascript/`フォルダ内のJSファイルは外部参照用です
+2. **WaterCrawl API使用料**: 外部リンク要約にはWaterCrawl公式Pythonクライアントを使用するため、使用料が発生する場合があります
+3. **API制限**: OpenAI APIとWaterCrawl APIの制限に注意してください
+4. **キャッシュ**: 一度生成したタグはキャッシュされるため、再処理時は高速です
+5. **外部リンク処理**: 外部リンクの要約取得には時間がかかる場合があります
+6. **Obsidian DataviewJS**: DataviewJSプラグインが必要です
+7. **JavaScriptファイル**: `javascript/`フォルダ内のJSファイルは外部参照用です
 
 ## 🤝 貢献
 

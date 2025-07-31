@@ -1,6 +1,5 @@
 ---
 tags:
-  - tmiyata25
   - PDF
   - パイプライン
   - Markdown
@@ -9,7 +8,6 @@ tags:
   - 技術
   - データ処理
   - AI
-  - インデクサー
 ---
 
 # Taishi Miyata

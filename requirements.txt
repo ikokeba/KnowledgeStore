@@ -1,2 +1,3 @@
 openai>=1.0.0
-pathlib2>=2.3.7 
+pathlib2>=2.3.7
+watercrawl-py>=0.7.1 
