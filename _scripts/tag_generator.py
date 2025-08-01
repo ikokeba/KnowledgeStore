@@ -9,7 +9,6 @@ Xブックマークタグ自動生成・Obsidianプロパティ形式追加ス�
 - 生成されたタグをJSONファイルに保存
 - Obsidianプロパティ形式（YAML frontmatter）でタグを追加
 - 指定したフォルダのみに対してタグ付けを実行
-- 外部リンクがある場合はWaterCrawl APIを使用して要約を取得
 
 作成日: 2025-07-28
 作成者: AI Assistant
@@ -17,7 +16,7 @@ Xブックマークタグ自動生成・Obsidianプロパティ形式追加ス�
 - 2025-07-28: 初版作成
 - 2025-01-27: コマンドライン引数対応、指定フォルダ処理機能追加
 - 2025-01-27: Obsidianプロパティ形式タグ追加機能をマージ
-- 2025-01-27: WaterCrawl API統合、外部リンク要約機能追加
+- 2025-01-27: 外部リンク要約機能を除外
 """
 
 import os
@@ -28,23 +27,16 @@ from pathlib import Path
 from typing import Dict, List, Optional
 import openai
 from datetime import datetime
-from watercrawl import WaterCrawlAPIClient
 
 class BookmarkTagGenerator:
-    def __init__(self, openai_api_key: str, watercrawl_api_key: str = None):
+    def __init__(self, openai_api_key: str):
         """
         タグ生成器の初期化
         
         Args:
             openai_api_key: OpenAI APIキー
-            watercrawl_api_key: WaterCrawl APIキー（オプション）
         """
         self.client = openai.OpenAI(api_key=openai_api_key)
-        self.watercrawl_api_key = watercrawl_api_key
-        if watercrawl_api_key:
-            self.watercrawl_client = WaterCrawlAPIClient(api_key=watercrawl_api_key)
-        else:
-            self.watercrawl_client = None
         self.tags_cache_file = "bookmark_tags_cache.json"
         self.tags_cache = self._load_tags_cache()
         
@@ -65,137 +57,6 @@ class BookmarkTagGenerator:
                 json.dump(self.tags_cache, f, ensure_ascii=False, indent=2)
         except Exception as e:
             print(f"キャッシュ保存エラー: {e}")
-    
-    def extract_external_links(self, content: str) -> List[str]:
-        """
-        Markdownコンテンツから外部リンクを抽出
-        
-        Args:
-            content: Markdownコンテンツ
-            
-        Returns:
-            外部リンクのリスト
-        """
-        # Markdownリンク形式を抽出 [text](url)
-        markdown_links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
-        
-        # プレーンテキストURLを抽出
-        url_pattern = r'https?://[^\s\)]+'
-        plain_urls = re.findall(url_pattern, content)
-        
-        external_links = []
-        
-        # MarkdownリンクからURLを抽出
-        for text, url in markdown_links:
-            if url.startswith('http'):
-                external_links.append(url)
-        
-        # プレーンテキストURLを追加
-        external_links.extend(plain_urls)
-        
-        # 重複を除去
-        external_links = list(set(external_links))
-        
-        return external_links
-    
-    def get_watercrawl_summary(self, url: str) -> Optional[str]:
-        """
-        WaterCrawl APIを使用してURLの要約を取得
-        
-        Args:
-            url: 要約を取得するURL
-            
-        Returns:
-            要約テキスト（エラーの場合はNone）
-        """
-        if not self.watercrawl_client:
-            print(f"WaterCrawl APIキーが設定されていません: {url}")
-            return None
-        
-        try:
-            # WaterCrawlクライアントを使用してURLを抽出
-            result = self.watercrawl_client.scrape_url(
-                url=url,
-                page_options=None,
-                plugin_options=None,
-                sync=True,
-                download=True
-            )
-            
-            # 結果から要約を取得
-            if result and isinstance(result, dict):
-                # メタデータからタイトルを取得
-                metadata = result.get('result', {}).get('metadata', {})
-                title = metadata.get('title', '')
-                
-                # Markdownコンテンツから要約を作成
-                markdown_content = result.get('result', {}).get('markdown', '')
-                if markdown_content:
-                    # 最初の500文字を要約として使用
-                    summary = markdown_content[:500]
-                    if len(markdown_content) > 500:
-                        summary += "..."
-                    
-                    # タイトルと要約を組み合わせ
-                    if title:
-                        return f"タイトル: {title}\n\n要約: {summary}"
-                    else:
-                        return summary
-                else:
-                    print(f"WaterCrawlからMarkdownコンテンツを取得できませんでした: {url}")
-                    return None
-            else:
-                print(f"WaterCrawlから要約を取得できませんでした: {url}")
-                return None
-                
-        except Exception as e:
-            print(f"WaterCrawl API 呼び出しエラー: {url} - {e}")
-            return None
-    
-    def add_external_link_summaries(self, file_path: str, external_links: List[str]):
-        """
-        Markdownファイルに外部リンクの要約を追加
-        
-        Args:
-            file_path: ファイルパス
-            external_links: 外部リンクのリスト
-        """
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            # 既存の外部リンク要約セクションを削除
-            content = re.sub(r'\n## External Link Summaries.*?(?=\n##|\n---|\Z)', '', content, flags=re.DOTALL)
-            
-            summaries = []
-            for url in external_links:
-                print(f"外部リンクの要約を取得中: {url}")
-                summary = self.get_watercrawl_summary(url)
-                if summary:
-                    summaries.append(f"### {url}\n{summary}\n")
-                else:
-                    summaries.append(f"### {url}\n要約の取得に失敗しました。\n")
-            
-            if summaries:
-                # ファイルの末尾に要約セクションを追加
-                summary_section = "\n## External Link Summaries\n\n" + "\n".join(summaries)
-                
-                # ファイルの末尾の改行を調整
-                if content.endswith('\n'):
-                    new_content = content + summary_section
-                else:
-                    new_content = content + '\n' + summary_section
-                
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                
-                print(f"外部リンク要約を追加しました: {file_path}")
-                print(f"処理したリンク数: {len(external_links)}")
-            else:
-                print(f"外部リンクがありません: {file_path}")
-            
-        except Exception as e:
-            print(f"外部リンク要約追加エラー {file_path}: {e}")
     
     def extract_content_from_markdown(self, file_path: str) -> str:
         """
@@ -219,9 +80,6 @@ class BookmarkTagGenerator:
             
             # 画像部分を除去
             content = re.sub(r'## Images.*', '', content, flags=re.DOTALL)
-            
-            # 外部リンク要約部分を除去
-            content = re.sub(r'## External Link Summaries.*', '', content, flags=re.DOTALL)
             
             # 不要な改行を整理
             content = re.sub(r'\n+', '\n', content)
@@ -352,14 +210,6 @@ class BookmarkTagGenerator:
                 print(f"コンテンツが空です: {file_path}")
                 return []
             
-            # 外部リンクを抽出
-            external_links = self.extract_external_links(content)
-            
-            # 外部リンクがある場合は要約を追加
-            if external_links and self.watercrawl_api_key:
-                print(f"外部リンクを検出: {len(external_links)}個")
-                self.add_external_link_summaries(file_path, external_links)
-            
             # タグを生成
             print(f"タグを生成中: {file_path}")
             tags = self.generate_tags_with_openai(content, title)
@@ -444,15 +294,8 @@ def main():
         print("使用方法: $env:OPENAI_API_KEY='your-api-key'")
         return
     
-    # WaterCrawl APIキーを環境変数から取得
-    watercrawl_api_key = os.getenv('WATERCRAWL_API_KEY')
-    if not watercrawl_api_key:
-        print("警告: WATERCRAWL_API_KEY環境変数が設定されていません")
-        print("外部リンク要約機能は無効になります")
-        print("使用方法: $env:WATERCRAWL_API_KEY='your-api-key'")
-    
     # タグ生成器を初期化
-    generator = BookmarkTagGenerator(openai_api_key, watercrawl_api_key)
+    generator = BookmarkTagGenerator(openai_api_key)
     
     # 利用可能なディレクトリを取得
     available_dirs = generator.find_bookmark_directories()

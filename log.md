@@ -333,3 +333,20 @@ APIキーの権限不足またはアカウント制限の可能性が高い。Wa
 - 本番用とテスト用スクリプトの使用方法分離
 - テスト用スクリプトの詳細説明追加
 - 注意事項にスクリプト使い分けの説明追加 
+
+# 作業ログ
+
+## 2025-01-27
+
+### tag_generator.py 外部リンク要約機能除外
+- **作業内容**: `tag_generator.py`から外部リンク要約機能を完全に除外
+- **変更点**:
+  - WaterCrawl API関連のインポートとクライアント初期化を削除
+  - `extract_external_links()`メソッドを削除
+  - `get_watercrawl_summary()`メソッドを削除
+  - `add_external_link_summaries()`メソッドを削除
+  - `extract_content_from_markdown()`から外部リンク要約部分の除去処理を削除
+  - `process_bookmark_file()`から外部リンク処理部分を削除
+  - メイン関数からWaterCrawl APIキー取得処理を削除
+- **理由**: ユーザーからの要望により、Link欄のURL情報を下部に記載する処理を除外
+- **結果**: タグ生成機能のみに絞ったシンプルなスクリプトに変更 
