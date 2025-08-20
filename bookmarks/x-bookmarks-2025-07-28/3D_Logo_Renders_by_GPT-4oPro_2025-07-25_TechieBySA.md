@@ -10,8 +10,8 @@ tags:
   - ロゴデザイン
   - 3Dデザイン
   - テクノロジー
+既読・整理済み: false
 ---
-
 # TechieSA
 
 **Author:** @TechieBySA

@@ -10,8 +10,8 @@ tags:
   - クラウド
   - サービス構築
   - データサイエンス
+既読・整理済み: false
 ---
-
 # Microsoft Tech
 
 **Author:** @msdevjp

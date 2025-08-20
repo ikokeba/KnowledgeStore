@@ -10,8 +10,8 @@ tags:
   - 自動化
   - 設定
   - プログラミング
+既読・整理済み: false
 ---
-
 # よしこ / yoshiko
 
 **Author:** @yoshiko_pg

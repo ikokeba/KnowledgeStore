@@ -10,8 +10,8 @@ tags:
   - デプロイ
   - JupyterNotebook
   - データサイエンス
+既読・整理済み: false
 ---
-
 # ふくろう系データサイエンティスト
 
 **Author:** @SalesAnalyticsJ

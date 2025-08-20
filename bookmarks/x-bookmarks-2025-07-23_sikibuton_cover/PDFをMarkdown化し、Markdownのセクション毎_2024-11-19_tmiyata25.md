@@ -8,8 +8,8 @@ tags:
   - 技術
   - データ処理
   - AI
+既読・整理済み: false
 ---
-
 # Taishi Miyata
 
 **Author:** @tmiyata25

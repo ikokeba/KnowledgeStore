@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.ext == "md"
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.path.contains("bookmarks")
+    order:
+      - file.name
+      - 既読・整理済み
+      - tags
+      - file.ctime
+    sort:
+      - property: 既読・整理済み
+        direction: ASC
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      file.name: 319
+      note.既読・整理済み: 47
+      file.ctime: 95
+    imageFit: contain

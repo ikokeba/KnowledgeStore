@@ -10,8 +10,8 @@ tags:
   - 開発
   - オープンソース
   - neovim
+既読・整理済み: false
 ---
-
 # 龍
 
 **Author:** @_ame_a_

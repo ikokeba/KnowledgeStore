@@ -10,8 +10,8 @@ tags:
   - AI
   - 技術記事
   - ハードウェア
+既読・整理済み: false
 ---
-
 # タカヲ(Takao)
 
 **Author:** @mongonta555

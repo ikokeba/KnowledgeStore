@@ -10,8 +10,8 @@ tags:
   - 最尤推定
   - 機械学習
   - 生成モデル
+既読・整理済み: false
 ---
-
 # Hiroshi Takahashi
 
 **Author:** @taka8hiroshi

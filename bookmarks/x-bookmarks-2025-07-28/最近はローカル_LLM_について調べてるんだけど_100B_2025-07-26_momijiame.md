@@ -10,8 +10,8 @@ tags:
   - AI
   - 量子化
   - ローカルLLM
+既読・整理済み: false
 ---
-
 # もみじあめ
 
 **Author:** @momijiame

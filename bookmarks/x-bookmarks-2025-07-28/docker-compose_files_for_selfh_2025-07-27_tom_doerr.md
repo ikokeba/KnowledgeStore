@@ -10,8 +10,8 @@ tags:
   - 構成管理
   - オープンソース
   - 自ホスティング
+既読・整理済み: false
 ---
-
 # Tom Dörr
 
 **Author:** @tom_doerr

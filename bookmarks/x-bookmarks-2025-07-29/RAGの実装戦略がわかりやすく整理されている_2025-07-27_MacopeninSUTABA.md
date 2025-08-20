@@ -10,8 +10,8 @@ tags:
   - データサイエンス
   - 生成AI
   - 記事
+既読・整理済み: false
 ---
-
 # かずなり | 生成AI×ビジネスハック
 
 **Author:** @MacopeninSUTABA

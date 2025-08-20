@@ -10,8 +10,8 @@ tags:
   - テキスト処理
   - GitHub
   - プログラミング
+既読・整理済み: false
 ---
-
 # じゃむまる
 
 **Author:** @jammaru_lab

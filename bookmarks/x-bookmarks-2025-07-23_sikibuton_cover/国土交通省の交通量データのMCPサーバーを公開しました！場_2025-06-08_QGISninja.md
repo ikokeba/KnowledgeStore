@@ -10,8 +10,8 @@ tags:
   - QGIS
   - データサイエンス
   - GIS
+既読・整理済み: false
 ---
-
 # QGIS Ninja （QGIS 忍者）
 
 **Author:** @QGISninja

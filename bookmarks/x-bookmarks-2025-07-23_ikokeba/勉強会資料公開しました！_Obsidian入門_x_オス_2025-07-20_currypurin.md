@@ -10,8 +10,8 @@ tags:
   - 技術共有
   - 生産性向上
   - Obsidian
+既読・整理済み: false
 ---
-
 # カレーちゃん
 
 **Author:** @currypurin

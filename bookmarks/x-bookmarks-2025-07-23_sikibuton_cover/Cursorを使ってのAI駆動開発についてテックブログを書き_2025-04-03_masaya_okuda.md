@@ -10,8 +10,8 @@ tags:
   - コードベース
   - プログラミング
   - テクノロジー
+既読・整理済み: false
 ---
-
 # okkun
 
 **Author:** @masaya_okuda

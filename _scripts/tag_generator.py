@@ -144,7 +144,7 @@ class BookmarkTagGenerator:
     
     def add_obsidian_tags(self, file_path: str, tags: List[str]):
         """
-        MarkdownファイルにObsidianプロパティ形式でタグを追加
+        MarkdownファイルにObsidianプロパティ形式でタグを追加（既存プロパティを保持）
         
         Args:
             file_path: ファイルパス
@@ -154,25 +154,67 @@ class BookmarkTagGenerator:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
             
-            # 既存のタグ行を削除
-            content = re.sub(r'^tags:\s*.*\n', '', content, flags=re.MULTILINE)
-            content = re.sub(r'\ntags:\s*.*(?:\n|$)', '', content)
+            # YAMLフロントマターの解析
+            yaml_match = re.match(r'^---\n(.*?)\n---\n\n?(.*)', content, re.DOTALL)
             
-            # ファイル末尾のタグ行も削除
-            content = re.sub(r'\n\s*tags:.*$', '', content, flags=re.MULTILINE)
+            if yaml_match:
+                # 既存のYAMLフロントマターがある場合
+                yaml_content = yaml_match.group(1)
+                markdown_content = yaml_match.group(2)
+                
+                # 既存のプロパティを行単位で解析
+                yaml_lines = yaml_content.split('\n')
+                other_properties = []
+                existing_tags = []
+                
+                # tagsセクションとその他のプロパティを分離
+                in_tags_section = False
+                for line in yaml_lines:
+                    if line.strip() == 'tags:':
+                        in_tags_section = True
+                        continue
+                    elif line.strip() and not line.startswith('  ') and not line.startswith('\t'):
+                        # 新しいプロパティの開始
+                        in_tags_section = False
+                        other_properties.append(line)
+                    elif in_tags_section and (line.startswith('  - ') or line.startswith('\t- ')):
+                        # タグエントリをスキップ（新しいタグで置き換える）
+                        continue
+                    elif not in_tags_section and line.strip():
+                        other_properties.append(line)
+                
+                # 新しいYAMLフロントマターを構築
+                new_yaml_lines = ['---']
+                
+                # tagsを最初に追加
+                if tags:
+                    new_yaml_lines.append('tags:')
+                    for tag in tags:
+                        tag_name = tag.replace('#', '').strip()
+                        new_yaml_lines.append(f'  - {tag_name}')
+                
+                # 他のプロパティを追加
+                new_yaml_lines.extend(other_properties)
+                new_yaml_lines.append('---')
+                
+                # 新しいコンテンツを構築
+                new_content = '\n'.join(new_yaml_lines) + '\n\n' + markdown_content
+                
+            else:
+                # YAMLフロントマターがない場合は新規作成
+                if tags:
+                    yaml_lines = ['---', 'tags:']
+                    for tag in tags:
+                        tag_name = tag.replace('#', '').strip()
+                        yaml_lines.append(f'  - {tag_name}')
+                    yaml_lines.extend(['既読・整理済み: false', '---'])
+                    
+                    new_content = '\n'.join(yaml_lines) + '\n\n' + content
+                else:
+                    new_content = content
             
+            # ファイルに書き込み
             if tags:
-                # Obsidianプロパティ形式のタグを作成
-                tags_yaml = "---\ntags:\n"
-                for tag in tags:
-                    # #を除去してタグ名のみを取得
-                    tag_name = tag.replace('#', '').strip()
-                    tags_yaml += f"  - {tag_name}\n"
-                tags_yaml += "---\n\n"
-                
-                # ファイルの先頭に挿入
-                new_content = tags_yaml + content
-                
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.write(new_content)
                 

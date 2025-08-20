@@ -10,11 +10,9 @@ tags:
   - 開発体験
   - 技術共有
   - プログラミング
+既読・整理済み: false
 ---
 
----
-  - A2A
----
 # ゴマフリーダム@Python教室
 
 **Author:** @gomafreeeeeedom

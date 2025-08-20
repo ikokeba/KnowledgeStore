@@ -10,8 +10,8 @@ tags:
   - GeminiCLI
   - レポート作成
   - データサイエンス
+既読・整理済み: false
 ---
-
 # わたヤク@AI臨床研究
 
 **Author:** @ai_biostat

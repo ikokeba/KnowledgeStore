@@ -6,12 +6,14 @@
 機能:
 - 新規ブックマークフォルダを検出
 - 既存のタグ生成器を使用してタグを付与
+- 「既読・整理済み: false」プロパティを自動追加
 - 処理済みフォルダの記録
 
 作成日: 2025-07-28
 作成者: AI Assistant
 更新履歴:
 - 2025-07-28: 初版作成
+- 2025-08-20: プロパティ追加機能を統合
 """
 
 import os
@@ -19,6 +21,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 from tag_generator import BookmarkTagGenerator
+from add_read_property import ReadPropertyAdder
 
 class NewFolderProcessor:
     def __init__(self, openai_api_key: str):
@@ -29,6 +32,7 @@ class NewFolderProcessor:
             openai_api_key: OpenAI APIキー
         """
         self.tag_generator = BookmarkTagGenerator(openai_api_key)
+        self.property_adder = ReadPropertyAdder()
         self.processed_folders_file = "processed_folders.json"
         self.processed_folders = self._load_processed_folders()
         self.bookmarks_base_dir = "bookmarks"
@@ -92,7 +96,18 @@ class NewFolderProcessor:
             
             try:
                 # タグ生成器でフォルダを処理
+                print(f"ステップ1: タグ生成中...")
                 self.tag_generator.process_bookmark_directory(folder)
+                
+                # プロパティ追加処理（統計をリセット）
+                print(f"ステップ2: 「既読・整理済み」プロパティ追加中...")
+                self.property_adder.stats = {"processed": 0, "modified": 0, "skipped": 0, "errors": 0}
+                folder_name = Path(folder).name
+                self.property_adder.process_specific_directory(folder_name)
+                
+                # プロパティ追加の統計情報を表示
+                stats = self.property_adder.stats
+                print(f"  プロパティ追加結果: 変更 {stats['modified']} / スキップ {stats['skipped']} / エラー {stats['errors']}")
                 
                 # 処理済みとして記録
                 self.processed_folders.add(folder)

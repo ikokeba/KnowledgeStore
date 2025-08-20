@@ -10,8 +10,8 @@ tags:
   - 技術資料
   - Dockerイメージ
   - 基礎学習
+既読・整理済み: false
 ---
-
 # かずなり | 生成AI×ビジネスハック
 
 **Author:** @MacopeninSUTABA

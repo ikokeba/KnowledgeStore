@@ -10,8 +10,8 @@ tags:
   - 大規模言語モデル
   - ツール
   - データサイエンス
+既読・整理済み: false
 ---
-
 # Tom Dörr
 
 **Author:** @tom_doerr

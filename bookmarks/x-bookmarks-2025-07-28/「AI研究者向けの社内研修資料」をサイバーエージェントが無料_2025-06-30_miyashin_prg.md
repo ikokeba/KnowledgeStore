@@ -10,8 +10,8 @@ tags:
   - VSCode
   - 社内研修
   - データサイエンス
+既読・整理済み: false
 ---
-
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg

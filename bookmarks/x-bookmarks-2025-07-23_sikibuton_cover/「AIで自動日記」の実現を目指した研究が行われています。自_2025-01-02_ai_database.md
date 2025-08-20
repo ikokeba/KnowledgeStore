@@ -10,8 +10,8 @@ tags:
   - 自動化
   - 機械学習
   - データサイエンス
+既読・整理済み: false
 ---
-
 # AIDB
 
 **Author:** @ai_database

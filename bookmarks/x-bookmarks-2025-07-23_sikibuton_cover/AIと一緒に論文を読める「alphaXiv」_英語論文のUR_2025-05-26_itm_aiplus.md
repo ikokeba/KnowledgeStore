@@ -10,8 +10,8 @@ tags:
   - AI
   - alphaXiv
   - データサイエンス
+既読・整理済み: false
 ---
-
 # ITmedia AI＋
 
 **Author:** @itm_aiplus

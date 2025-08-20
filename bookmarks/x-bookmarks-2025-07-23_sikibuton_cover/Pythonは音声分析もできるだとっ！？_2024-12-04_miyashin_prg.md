@@ -10,8 +10,8 @@ tags:
   - 機械学習
   - データサイエンス
   - ライブラリ
+既読・整理済み: false
 ---
-
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg

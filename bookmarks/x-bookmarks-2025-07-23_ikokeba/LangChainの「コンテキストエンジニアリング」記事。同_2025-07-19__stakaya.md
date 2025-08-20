@@ -10,8 +10,8 @@ tags:
   - データ処理
   - コンテキストエンジニアリング
   - 要約
+既読・整理済み: false
 ---
-
 # Shinichi Takaŷanagi
 
 **Author:** @_stakaya

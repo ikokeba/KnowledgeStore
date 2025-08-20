@@ -10,8 +10,8 @@ tags:
   - データフォーマット
   - プログラミング
   - 抽象化
+既読・整理済み: false
 ---
-
 # 神威/KAMUI
 
 **Author:** @kamui_qai

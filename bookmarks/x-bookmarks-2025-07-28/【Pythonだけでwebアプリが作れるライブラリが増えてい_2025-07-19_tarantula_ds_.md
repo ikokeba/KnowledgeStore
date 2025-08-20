@@ -10,8 +10,8 @@ tags:
   - ライブラリ
   - FastHTML
   - データサイエンス
+既読・整理済み: false
 ---
-
 # タランチュラ | データサイエンティスト
 
 **Author:** @tarantula_ds_

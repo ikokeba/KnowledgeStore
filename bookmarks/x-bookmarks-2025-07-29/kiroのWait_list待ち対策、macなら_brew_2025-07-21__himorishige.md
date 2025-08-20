@@ -10,8 +10,8 @@ tags:
   - kiro
   - ソフトウェア
   - winget
+既読・整理済み: false
 ---
-
 # HiMorishige
 
 **Author:** @_himorishige

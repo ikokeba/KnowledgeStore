@@ -10,8 +10,8 @@ tags:
   - 機械学習
   - プログラミング
   - 教育
+既読・整理済み: false
 ---
-
 # 吉波拓夢 『Claude Codeで学ぶAI駆動開発』
 
 **Author:** @yoshi8__

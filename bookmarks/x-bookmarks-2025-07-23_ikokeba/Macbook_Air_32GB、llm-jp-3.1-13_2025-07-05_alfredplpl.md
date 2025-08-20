@@ -10,8 +10,8 @@ tags:
   - 機械学習
   - Macbook
   - データサイエンス
+既読・整理済み: false
 ---
-
 # あるふ
 
 **Author:** @alfredplpl

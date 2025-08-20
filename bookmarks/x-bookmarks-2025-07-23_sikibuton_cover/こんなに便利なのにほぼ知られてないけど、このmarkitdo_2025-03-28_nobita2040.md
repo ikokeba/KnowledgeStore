@@ -8,8 +8,8 @@ tags:
   - Markdown
   - Web開発
   - 文字起こし
+既読・整理済み: false
 ---
-
 # Ryo Sato | Replit解体新書を運営中
 
 **Author:** @nobita2040

@@ -11,14 +11,13 @@
             "id": "b70e448d6d2863be",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "bookmarks/x-bookmarks-2025-07-28/「Docker入門」に関するQiita記事が有益なので共有。_2025-07-24_MacopeninSUTABA.md",
-                "mode": "source",
-                "source": false
+                "file": "test base.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "「Docker入門」に関するQiita記事が有益なので共有。_2025-07-24_MacopeninSUTABA"
+              "icon": "lucide-table",
+              "title": "test base"
             }
           }
         ]
@@ -53,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "pasted",
+                "query": "tag:TOP1%論文",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -164,16 +163,30 @@
               "icon": "lucide-archive",
               "title": "すべてのプロパティ"
             }
+          },
+          {
+            "id": "b86becf8b2eb444c",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "test base.base"
+              },
+              "icon": "lucide-info",
+              "title": "test baseのファイルプロパティ"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:クイックスイッチャーを開く": false,
       "graph:グラフビューを開く": false,
       "canvas:新規キャンバスを作成": false,
@@ -183,43 +196,43 @@
   },
   "active": "b70e448d6d2863be",
   "lastOpenFiles": [
-    "Xブックマーク管理サマリー.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/資料公開しました...!!今までの数年のバズワード全部入り_2025-07-16_takuya_0301.md",
-    "bookmarks/x-bookmarks-2025-07-28/コーディングエージェント概観202507_Itsuk_2025-07-27_tech_slideshare.md",
-    "_scripts/simple_watercrawl_test.py",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/REQUESTED",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/INSTALLER",
-    "env/Lib/site-packages/watercrawl/__pycache__/tests.cpython-313.pyc",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/WHEEL",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/top_level.txt",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/METADATA",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/RECORD",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info/LICENSE",
-    "env/Lib/site-packages/watercrawl_py-0.9.2.dist-info",
+    "bookmarks/x-bookmarks-2025-08-20/Memories_は便利ですけど、ルールにするともっと便利。_2025-08-10_kinopee_ai.md",
+    "test base.base",
+    "bookmarks/x-bookmarks-2025-07-23_ikokeba/【データハンドリングのためのSQL】これが無料！？ブレイン_2025-07-19_tarantula_ds_.md",
+    "bookmarks/x-bookmarks-2025-08-20/僕の論文の被引用数が_2000回_を超えました！94%は主_2025-08-08_TricksterKallis.md",
+    "bookmarks/x-bookmarks-2025-07-29/index.md",
+    "test_modification/test_file.md",
+    "bookmarks/x-bookmarks-2025-08-20/もう既にみんな翻訳してくれててるけど_OpenAI_が公開し_2025-08-16_MLBear2.md",
+    "_scripts/__pycache__/tag_generator.cpython-313.pyc",
+    "test_modification",
+    "bookmarks/x-bookmarks-2025-08-20/論文読むとき、Obsidianのタブ構成こうしてます左上_2025-08-01_pkm_tk111.md",
+    "bookmarks/x-bookmarks-2025-08-20/臨床心理やカウンセリングの倫理では、「際限なく寄り添う」こと_2025-08-10_Kana_Tsbs.md",
+    "bookmarks/x-bookmarks-2025-08-20/結局個人開発でデプロイする先はCloud_Runが一番良さげ_2025-08-04_NGO275.md",
+    "bookmarks/x-bookmarks-2025-08-20/昨日教えてもらったM5Stack公式のAIチャット、これなか_2025-08-02_Kaz_Macintosh.md",
+    "bookmarks/x-bookmarks-2025-08-20/子ども（6~12歳）の宗教的信念が、自身の共感的関心と親の宗_2025-08-15_Tatsunori_Ishii.md",
+    "bookmarks/x-bookmarks-2025-08-20/日に何度もアクセスするWebページをアプリ化して、タスクバー_2025-08-05_qiitapoi.md",
+    "bookmarks/x-bookmarks-2025-08-20/初めて論文を書く時にどこから手をつけたら良いのか、迷ってしま_2025-08-08_freezapt.md",
+    "bookmarks/x-bookmarks-2025-08-20/個人開発者は絶対これ使って。Claude_Codeが10倍強_2025-07-29_7_eito_7.md",
+    "bookmarks/x-bookmarks-2025-08-20/ピックアップ_ローカルLLM入門！LM_Studioをバ_2025-07-29_zenn_dev.md",
+    "bookmarks/x-bookmarks-2025-08-20/ピックアップ_リモートMCPサーバーを試す（Resour_2025-08-05_zenn_dev.md",
+    "bookmarks/x-bookmarks-2025-08-20/デジタル庁が「イラストレーション・アイコン素材集」を無料で配_2025-08-05_joshinishiguchi.md",
+    "bookmarks/x-bookmarks-2025-08-20/ソフトウェア設計を考えるときの4要素↑具体①クラス関_2025-08-02_qumaiu.md",
+    "bookmarks/x-bookmarks-2025-08-20/イーロンマスク率いるxAIが発表した画像・動画生成モデル「G_2025-08-08_kosuke_agos.md",
+    "bookmarks/x-bookmarks-2025-08-20/ちなみに、こういうUSBデバイスの開発に超おすすめなのがこれ_2025-08-04_felis_silv.md",
+    "bookmarks/x-bookmarks-2025-08-20/そういうことだったのかぁ！！！_2025-08-02_miyashin_prg.md",
+    "bookmarks/x-bookmarks-2025-08-20/この辺が最前線っぽい感じです_2025-08-15_Lize_san_suki.md",
+    "bookmarks/x-bookmarks-2025-08-20/この人いつも検定の話してるね_2025-08-08_st4tditt0.md",
+    "bookmarks/x-bookmarks-2025-08-20/【論文検索の新定番】初手は「GPT-5Thinking_+_2025-08-17_genkAIjokyo.md",
+    "bookmarks/x-bookmarks-2025-08-20/【新着コラム｜第452話】見せかけの関係を見抜く方法・相_2025-08-05_SalesAnalyticsJ.md",
+    "bookmarks/x-bookmarks-2025-08-20/【図解解説】0からAIエージェントを実装してポートフォリオ自_2025-08-10_qiitapoi.md",
+    "bookmarks/x-bookmarks-2025-08-20",
+    "bookmarks/test_integration_dir",
+    "_scripts/__pycache__/add_read_property.cpython-313.pyc",
+    "_scripts/__pycache__",
+    "_scripts/add_read_property.py",
+    "test_bookmarks/test_dir",
+    "test_bookmarks",
     "bookmarks/x-bookmarks-2025-07-28/_attachments/Pasted image 20250729152923.png",
-    "Pasted image 20250729152923.png",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/LangChainの「コンテキストエンジニアリング」記事。同_2025-07-19__stakaya.md",
-    "bookmarks/x-bookmarks-2025-07-28/コンテキストエンジニアリングが話題に上がっていますが、その背_2025-07-23_sasa_kuna_.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/勉強会資料公開しました！_Obsidian入門_x_オス_2025-07-20_currypurin.md",
-    "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover/生成AI時代に役立つChrome拡張機能「Copy_as_M_2025-06-02_nwiizo.md",
-    "bookmarks/x-bookmarks-2025-07-28/ローカルの_Markdown_をツリー表示でブラウズできる_2025-07-26_qiitapoi.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/どさくさに紛れて宣伝Obsidian_に_X_のブックマ_2025-07-17____nix___.md",
-    "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover/こんなに便利なのにほぼ知られてないけど、このmarkitdo_2025-03-28_nobita2040.md",
-    "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover/Thank_you_800_stars_on_GitHub_2025-07-11_yoshiko_pg.md",
-    "bookmarks/x-bookmarks-2025-07-23_sikibuton_cover/PDFをMarkdown化し、Markdownのセクション毎_2024-11-19_tmiyata25.md",
-    "bookmarks/x-bookmarks-2025-07-28/Obsidianのアカデミック用途への応用まとめ_2025-07-27_genkAIjokyo.md",
-    "bookmarks/x-bookmarks-2025-07-28/「個人開発_完全ガイド」を教えてもらったんだけどめっちゃ良い_2025-07-19_MLBear2.md",
-    "bookmarks/x-bookmarks-2025-07-28/データ構造が複雑になるほど対策なしでは分析精度を高くすること_2025-07-25_light940.md",
-    "bookmarks/x-bookmarks-2025-07-28/ｽｯつ_「Webサービス公開前のチェックリスト」_2025-07-25_catnose99.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/Claude_Codeを手元のDocker環境で動かすための_2025-07-21_matsuu.md",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/[入門]_PythonでuvとPEP_723を使うと開発体験_2025-06-29_gomafreeeeeedom.md",
-    "bookmarks/x-bookmarks-2025-07-29/ｽｯつ_「Webサービス公開前のチェックリスト」_2025-07-25_catnose99.md",
-    "bookmarks/x-bookmarks-2025-07-29/遅くなりましたが、設計ナイト2025の発表資料アップしました_2025-07-28__pochi.md",
-    "bookmarks/x-bookmarks-2025-07-29/データ構造が複雑になるほど対策なしでは分析精度を高くすること_2025-07-25_light940.md",
-    "bookmarks/x-bookmarks-2025-07-29/ちなみに道中の新幹線では、イマドキのLLMで使われているTr_2025-07-28_mi141.md",
-    "bookmarks/x-bookmarks-2025-07-29/このプロセスだってお母さんずっと言ってるでしょ〜！①すぐ_2025-07-28_chira.md",
-    "bookmarks/x-bookmarks-2025-07-29/【論文を実装する上で必須サイト】卒論・修論を書く季節ですね_2025-07-20_tarantula_ds_.md",
-    "bookmarks/x-bookmarks-2025-07-29/【松尾研_論文の書き方】僕はこの記事を参考に修士論文を執_2025-06-26_tarantula_ds_.md",
-    "bookmarks/x-bookmarks-2025-07-29/【ローカル環境で動作するAI研究アシスタント「Local_D_2025-03-21_LangChainJP.md"
+    "Pasted image 20250729152923.png"
   ]
 }
