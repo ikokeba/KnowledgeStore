@@ -12,6 +12,7 @@ tags:
   - GitLens
 既読・整理済み: false
 ---
+
 # ふぁど｜なんでもやるCTO
 
 **Author:** @fadysan_rh

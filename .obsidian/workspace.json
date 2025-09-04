@@ -4,20 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "04164f890914b2bb",
+        "id": "0765fb8826f6b513",
         "type": "tabs",
         "children": [
           {
-            "id": "b70e448d6d2863be",
+            "id": "de003de7f5f8331e",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "test base.base",
-                "viewName": "Table"
+                "file": "bookmarks/x-bookmarks-2025-09-04/AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_ai.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "test base"
+              "icon": "lucide-file",
+              "title": "AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_ai"
             }
           }
         ]
@@ -52,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:TOP1%論文",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -170,10 +171,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "test base.base"
+                "file": "bookmarks/x-bookmarks-2025-09-04/AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_ai.md"
               },
               "icon": "lucide-info",
-              "title": "test baseのファイルプロパティ"
+              "title": "AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_aiのファイルプロパティ"
             }
           }
         ],
@@ -181,8 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 233.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,44 +194,43 @@
       "command-palette:コマンドパレットを開く": false
     }
   },
-  "active": "b70e448d6d2863be",
+  "active": "6ea4016787d31830",
   "lastOpenFiles": [
-    "bookmarks/x-bookmarks-2025-08-20/Memories_は便利ですけど、ルールにするともっと便利。_2025-08-10_kinopee_ai.md",
     "test base.base",
-    "bookmarks/x-bookmarks-2025-07-23_ikokeba/【データハンドリングのためのSQL】これが無料！？ブレイン_2025-07-19_tarantula_ds_.md",
-    "bookmarks/x-bookmarks-2025-08-20/僕の論文の被引用数が_2000回_を超えました！94%は主_2025-08-08_TricksterKallis.md",
-    "bookmarks/x-bookmarks-2025-07-29/index.md",
-    "test_modification/test_file.md",
-    "bookmarks/x-bookmarks-2025-08-20/もう既にみんな翻訳してくれててるけど_OpenAI_が公開し_2025-08-16_MLBear2.md",
+    "bookmarks/x-bookmarks-2025-09-04/159_page_PDF_download._The_b_2025-08-29_quantscience_.md",
+    "Xブックマーク管理サマリー.md",
+    "bookmarks/x-bookmarks-2025-09-04_/発表の中身がよく理解できなかった時の私座長の質問1._2025-09-03_mhiguchi_nims.md",
+    "bookmarks/x-bookmarks-2025-09-04_/特別なパソコンもってない人にローカルLLMを使ったAIプログ_2025-08-29_kis.md",
+    "bookmarks/x-bookmarks-2025-09-04_/実践データベース設計_①データベース設計概論_Recrui_2025-09-02_tech_slideshare.md",
+    "bookmarks/x-bookmarks-2025-09-04_/名著_「GitHub_CICD実践ガイド」を書いた著者がど_2025-09-03_koder_dev.md",
+    "bookmarks/x-bookmarks-2025-09-04_/【記事更新】私のブックマーク「音声対話における非言語生成」_2025-09-01_ai_gakkai.md",
+    "bookmarks/x-bookmarks-2025-09-04_/【絵本の読み聞かせは、幼児の危険認知能力を向上させることがで_2025-09-03_tankyuhiroba.md",
+    "bookmarks/x-bookmarks-2025-09-04_/【ベクトル検索RAGの課題に対応するReasoning-ba_2025-08-31_LangChainJP.md",
+    "bookmarks/x-bookmarks-2025-09-04_/“Windows”,_but_in_a_docker_con_2025-08-29_GithubProjects.md",
+    "bookmarks/x-bookmarks-2025-09-04_/run_and_test_github_actions_wo_2025-08-31_tom_doerr.md",
+    "bookmarks/x-bookmarks-2025-09-04_/Pythonのmap関数の全引数・戻り値・使用例を解説！_2025-09-03_gomafreeeeeedom.md",
+    "bookmarks/x-bookmarks-2025-09-04_/ONNX、ONNX_Runtimeを使うときに気をつけている_2025-09-01_Py2K4.md",
+    "bookmarks/x-bookmarks-2025-09-04_/index.md",
+    "bookmarks/x-bookmarks-2025-09-04_/Cursorが導入できない保守的な組織のPM向けにAI駆動P_2025-09-02_suh_sunaneko.md",
+    "bookmarks/x-bookmarks-2025-09-04_/Autonomous_News_AgentA_LangG_2025-08-31_LangChainAI.md",
+    "bookmarks/x-bookmarks-2025-09-04_/CUDAのバージョンを入れ替えるためにDocker使ってまし_2025-09-01_karaage0703.md",
+    "bookmarks/x-bookmarks-2025-09-04_/AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_ai.md",
+    "bookmarks/x-bookmarks-2025-09-04_/159_page_PDF_download._The_b_2025-08-29_quantscience_.md",
+    "bookmarks/x-bookmarks-2025-09-04_",
+    "bookmarks/x-bookmarks-2025-08-29_/超マニアックな話ですが、、わかる方だけAI_Agen_2025-08-21_0317_hiroya.md",
+    "bookmarks/x-bookmarks-2025-08-29_/賃貸の原状回復ルール、知ってるだけで数十万浮くこの図、_2025-08-20_sakkun_invest.md",
+    "bookmarks/x-bookmarks-2025-08-29_/論文読むとき、Obsidianのタブ構成こうしてます左上_2025-08-01_pkm_tk111.md",
+    "bookmarks/x-bookmarks-2025-08-29_/論文管理に時間を奪われがちな人は全員『Reference_M_2025-08-04_pkm_tk111.md",
+    "bookmarks/x-bookmarks-2025-08-29_/読みやすいコードを書きたい方へ_2025-08-10_miyashin_prg.md",
+    "bookmarks/x-bookmarks-2025-08-29_/論文作成プロンプトへの1000「スキ」ありがとうございます！_2025-08-01_genkAIjokyo.md",
+    "bookmarks/x-bookmarks-2025-08-29_",
+    "bookmarks/x-bookmarks-2025-08-29",
+    "無題のファイル 1.base",
+    "無題のファイル.base",
     "_scripts/__pycache__/tag_generator.cpython-313.pyc",
     "test_modification",
-    "bookmarks/x-bookmarks-2025-08-20/論文読むとき、Obsidianのタブ構成こうしてます左上_2025-08-01_pkm_tk111.md",
-    "bookmarks/x-bookmarks-2025-08-20/臨床心理やカウンセリングの倫理では、「際限なく寄り添う」こと_2025-08-10_Kana_Tsbs.md",
-    "bookmarks/x-bookmarks-2025-08-20/結局個人開発でデプロイする先はCloud_Runが一番良さげ_2025-08-04_NGO275.md",
-    "bookmarks/x-bookmarks-2025-08-20/昨日教えてもらったM5Stack公式のAIチャット、これなか_2025-08-02_Kaz_Macintosh.md",
-    "bookmarks/x-bookmarks-2025-08-20/子ども（6~12歳）の宗教的信念が、自身の共感的関心と親の宗_2025-08-15_Tatsunori_Ishii.md",
-    "bookmarks/x-bookmarks-2025-08-20/日に何度もアクセスするWebページをアプリ化して、タスクバー_2025-08-05_qiitapoi.md",
-    "bookmarks/x-bookmarks-2025-08-20/初めて論文を書く時にどこから手をつけたら良いのか、迷ってしま_2025-08-08_freezapt.md",
-    "bookmarks/x-bookmarks-2025-08-20/個人開発者は絶対これ使って。Claude_Codeが10倍強_2025-07-29_7_eito_7.md",
-    "bookmarks/x-bookmarks-2025-08-20/ピックアップ_ローカルLLM入門！LM_Studioをバ_2025-07-29_zenn_dev.md",
-    "bookmarks/x-bookmarks-2025-08-20/ピックアップ_リモートMCPサーバーを試す（Resour_2025-08-05_zenn_dev.md",
-    "bookmarks/x-bookmarks-2025-08-20/デジタル庁が「イラストレーション・アイコン素材集」を無料で配_2025-08-05_joshinishiguchi.md",
-    "bookmarks/x-bookmarks-2025-08-20/ソフトウェア設計を考えるときの4要素↑具体①クラス関_2025-08-02_qumaiu.md",
-    "bookmarks/x-bookmarks-2025-08-20/イーロンマスク率いるxAIが発表した画像・動画生成モデル「G_2025-08-08_kosuke_agos.md",
-    "bookmarks/x-bookmarks-2025-08-20/ちなみに、こういうUSBデバイスの開発に超おすすめなのがこれ_2025-08-04_felis_silv.md",
-    "bookmarks/x-bookmarks-2025-08-20/そういうことだったのかぁ！！！_2025-08-02_miyashin_prg.md",
-    "bookmarks/x-bookmarks-2025-08-20/この辺が最前線っぽい感じです_2025-08-15_Lize_san_suki.md",
-    "bookmarks/x-bookmarks-2025-08-20/この人いつも検定の話してるね_2025-08-08_st4tditt0.md",
-    "bookmarks/x-bookmarks-2025-08-20/【論文検索の新定番】初手は「GPT-5Thinking_+_2025-08-17_genkAIjokyo.md",
-    "bookmarks/x-bookmarks-2025-08-20/【新着コラム｜第452話】見せかけの関係を見抜く方法・相_2025-08-05_SalesAnalyticsJ.md",
-    "bookmarks/x-bookmarks-2025-08-20/【図解解説】0からAIエージェントを実装してポートフォリオ自_2025-08-10_qiitapoi.md",
     "bookmarks/x-bookmarks-2025-08-20",
     "bookmarks/test_integration_dir",
-    "_scripts/__pycache__/add_read_property.cpython-313.pyc",
-    "_scripts/__pycache__",
-    "_scripts/add_read_property.py",
-    "test_bookmarks/test_dir",
-    "test_bookmarks",
     "bookmarks/x-bookmarks-2025-07-28/_attachments/Pasted image 20250729152923.png",
     "Pasted image 20250729152923.png"
   ]

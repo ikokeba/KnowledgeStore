@@ -12,6 +12,7 @@ tags:
   - データサイエンス
 既読・整理済み: false
 ---
+
 # yoschi_s
 
 **Author:** @stern_bow

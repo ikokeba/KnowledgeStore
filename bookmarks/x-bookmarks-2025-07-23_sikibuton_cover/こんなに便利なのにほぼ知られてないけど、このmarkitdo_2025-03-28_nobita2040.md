@@ -4,12 +4,15 @@ tags:
   - Excel
   - PDF
   - 技術紹介
+  - nobita2040
   - ツール
   - Markdown
   - Web開発
   - 文字起こし
+  - RyoSato
 既読・整理済み: false
 ---
+
 # Ryo Sato | Replit解体新書を運営中
 
 **Author:** @nobita2040

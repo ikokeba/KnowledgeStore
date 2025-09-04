@@ -12,6 +12,7 @@ tags:
   - データサイエンス
 既読・整理済み: false
 ---
+
 # わたヤク@AI臨床研究
 
 **Author:** @ai_biostat

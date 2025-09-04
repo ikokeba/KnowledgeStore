@@ -12,6 +12,7 @@ tags:
   - 技術ブログ
 既読・整理済み: false
 ---
+
 # 西見 公宏 | Generative Agents
 
 **Author:** @mah_lab

@@ -12,6 +12,7 @@ tags:
   - アブダクション
 既読・整理済み: false
 ---
+
 # 限界読書
 
 **Author:** @genkaidokusho

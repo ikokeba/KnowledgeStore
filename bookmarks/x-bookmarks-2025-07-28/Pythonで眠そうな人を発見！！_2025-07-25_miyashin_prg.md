@@ -12,6 +12,7 @@ tags:
   - データサイエンス
 既読・整理済み: false
 ---
+
 # みやさかしんや@Python/AI/DX
 
 **Author:** @miyashin_prg

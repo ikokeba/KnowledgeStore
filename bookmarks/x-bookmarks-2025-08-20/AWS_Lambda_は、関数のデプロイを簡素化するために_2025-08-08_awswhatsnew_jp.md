@@ -12,6 +12,7 @@ tags:
   - サーバーレス
 既読・整理済み: false
 ---
+
 ---
 ---
 # What's New on AWS (非公式)

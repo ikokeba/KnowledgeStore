@@ -12,6 +12,7 @@ tags:
   - データサイエンス
 既読・整理済み: false
 ---
+
 # Tom Dörr
 
 **Author:** @tom_doerr

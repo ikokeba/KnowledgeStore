@@ -19,6 +19,6 @@ views:
         direction: DESC
     columnSize:
       file.name: 319
-      note.既読・整理済み: 47
-      file.ctime: 95
+      note.既読・整理済み: 54
+      file.ctime: 163
     imageFit: contain

@@ -12,6 +12,7 @@ tags:
   - 技術共有
 既読・整理済み: false
 ---
+
 # 勉強会スライドbot
 
 **Author:** @tech_slideshare

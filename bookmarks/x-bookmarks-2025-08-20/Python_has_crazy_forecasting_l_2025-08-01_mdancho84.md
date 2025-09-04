@@ -12,6 +12,7 @@ tags:
   - Python
 既読・整理済み: false
 ---
+
 ---
 ---
 # Matt Dancho (Business Science)
