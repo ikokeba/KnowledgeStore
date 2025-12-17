@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "気になる用語.md",
+                "file": "bookmarks/x-bookmarks-2025-12-15/「Gemini_3」_につくらせた、「動く図解」こういう_2025-11-19_excel_niisan.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "気になる用語"
+              "title": "「Gemini_3」_につくらせた、「動く図解」こういう_2025-11-19_excel_niisan"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 306.501522064209
   },
   "right": {
     "id": "16a46adbfba83975",
@@ -171,10 +171,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "気になる用語.md"
+                "file": "bookmarks/x-bookmarks-2025-12-15/「Gemini_3」_につくらせた、「動く図解」こういう_2025-11-19_excel_niisan.md"
               },
               "icon": "lucide-info",
-              "title": "気になる用語のファイルプロパティ"
+              "title": "「Gemini_3」_につくらせた、「動く図解」こういう_2025-11-19_excel_niisanのファイルプロパティ"
             }
           }
         ],
@@ -196,42 +196,42 @@
   },
   "active": "de003de7f5f8331e",
   "lastOpenFiles": [
-    "依存型リレーションシップ.md",
+    "_scripts/bookmark_manager.py",
+    "_scripts/remove_duplicate_tags.py",
+    "_scripts/add_tags_manually.py",
+    "bookmarks/x-bookmarks-2025-12-15/（読み聞かせ③）【絵本の読み聞かせ速度は、幼児の情緒的反応に_2025-09-21_tankyuhiroba.md",
+    "bookmarks/x-bookmarks-2025-12-15/（読み聞かせ②）【母親の養育態度は幼児の絵本の読み聞かせにど_2025-09-14_tankyuhiroba.md",
     "気になる用語.md",
-    "README.md",
-    "OpenAI.md",
+    "_scripts/process_single_folder.py",
+    "bookmarks/x-bookmarks-2025-12-15/研究費の申請書や、新しい研究計画を書くとき。最近、役に立っ_2025-12-05_prof_ai_hack.md",
+    "bookmarks/x-bookmarks-2025-12-15/結局AIフレンドリーなドキュメント管理はGitHub一元管理_2025-11-12_mako_yukinari.md",
+    "bookmarks/x-bookmarks-2025-12-15/（読み聞かせ②）【母親の養育態度は幼児の絵本の読み聞かせにど_2025-09-20_tankyuhiroba.md",
+    "bookmarks/x-bookmarks-2025-12-15/農業自動化ゲーム、このプログラムで草、木、ニンジンを完全自動_2025-10-11_MinoDriven.md",
+    "bookmarks/x-bookmarks-2025-12-15/論文投稿のお作法について書いてある唯一の論文です。執筆_2025-11-25_tokei389950.md",
+    "bookmarks/x-bookmarks-2025-12-15/論文投稿のお作法について書いてある唯一の論文。これを読む_2025-10-17_tokei389950.md",
+    "bookmarks/x-bookmarks-2025-12-15/論文を書き始めた頃、考察を書くのが一番しんどかった。何を_2025-11-30_GAKU9998511.md",
+    "bookmarks/x-bookmarks-2025-12-15/臨床研究で重要な「研究デザイン」とは実際、データ解析や論_2025-12-05_tokei389950.md",
+    "bookmarks/x-bookmarks-2025-12-15/私がよくやる、ファイルを保存した後、保存先のフォルダを開く方_2025-12-12_Tsutsui0524.md",
+    "bookmarks/x-bookmarks-2025-12-15/組織でAI活用する上では「ナレッジの管理」が非常に重要。_2025-11-24_Nurruttan.md",
+    "bookmarks/x-bookmarks-2025-12-15/研究内容、着目点は悪くないはずなのになぜか毎回、査読で苦戦_2025-12-08_tokei389950.md",
+    "bookmarks/x-bookmarks-2025-12-15/研究を始めたばかりの方ほど、スライド作りより「質疑応答」が_2025-12-10_prof_ai_hack.md",
+    "bookmarks/x-bookmarks-2025-12-15/様々なPDFで最新OCRモデルの性能を比較されていてとても良_2025-11-08_MLBear2.md",
+    "bookmarks/x-bookmarks-2025-12-15/現時点の自分のベストプラクティスは、_httpAGEN_2025-10-03_kenn.md",
+    "bookmarks/x-bookmarks-2025-12-15/玉瀬_友美,_幼児における絵本への情緒的反応に及ぼす読み聞か_2025-09-20_tankyuhiroba.md",
+    "bookmarks/x-bookmarks-2025-12-15/無料なのに誰も見てないビジネスネタの宝庫見つけたそれが、_2025-10-13_mylife_is_DQ.md",
+    "bookmarks/x-bookmarks-2025-12-15/本日のLT_Tab5でカメラの外部モニタ！_資料です#_2025-10-06_sohta02.md",
+    "bookmarks/x-bookmarks-2025-12-15/玄関の様子を常時表示、Raspberry_Piで作る専用監視_2025-09-24_FabSceneJp.md",
+    "bookmarks/x-bookmarks-2025-12-15/本日お話した資料はこちらになります！はじめてのDSPy_2025-10-16_mah_lab.md",
+    "bookmarks/x-bookmarks-2025-12-15/戦闘機「F-35」にはC++の特殊ルール適用版が使われており_2025-12-08_gigazine.md",
+    "bookmarks/x-bookmarks-2025-12-15/教えてもらう機会が少ない「論文の書き方」が丁寧に解説されてい_2025-09-19_developer_quant.md",
+    "bookmarks/x-bookmarks-2025-12-15/技術的負債の会計学_-_PHPカンファレンス広島2025__2025-10-11_tech_slideshare.md",
+    "bookmarks/x-bookmarks-2025-12-15",
     "test base.base",
-    "bookmarks/x-bookmarks-2025-09-04/AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_ai.md",
-    "Untitled.md",
-    "Xブックマーク管理サマリー.md",
-    "bookmarks/x-bookmarks-2025-09-04/159_page_PDF_download._The_b_2025-08-29_quantscience_.md",
-    "bookmarks/x-bookmarks-2025-09-04_/発表の中身がよく理解できなかった時の私座長の質問1._2025-09-03_mhiguchi_nims.md",
-    "bookmarks/x-bookmarks-2025-09-04_/特別なパソコンもってない人にローカルLLMを使ったAIプログ_2025-08-29_kis.md",
-    "bookmarks/x-bookmarks-2025-09-04_/実践データベース設計_①データベース設計概論_Recrui_2025-09-02_tech_slideshare.md",
-    "bookmarks/x-bookmarks-2025-09-04_/名著_「GitHub_CICD実践ガイド」を書いた著者がど_2025-09-03_koder_dev.md",
-    "bookmarks/x-bookmarks-2025-09-04_/【記事更新】私のブックマーク「音声対話における非言語生成」_2025-09-01_ai_gakkai.md",
-    "bookmarks/x-bookmarks-2025-09-04_/【絵本の読み聞かせは、幼児の危険認知能力を向上させることがで_2025-09-03_tankyuhiroba.md",
-    "bookmarks/x-bookmarks-2025-09-04_/【ベクトル検索RAGの課題に対応するReasoning-ba_2025-08-31_LangChainJP.md",
-    "bookmarks/x-bookmarks-2025-09-04_/“Windows”,_but_in_a_docker_con_2025-08-29_GithubProjects.md",
-    "bookmarks/x-bookmarks-2025-09-04_/run_and_test_github_actions_wo_2025-08-31_tom_doerr.md",
-    "bookmarks/x-bookmarks-2025-09-04_/Pythonのmap関数の全引数・戻り値・使用例を解説！_2025-09-03_gomafreeeeeedom.md",
-    "bookmarks/x-bookmarks-2025-09-04_/ONNX、ONNX_Runtimeを使うときに気をつけている_2025-09-01_Py2K4.md",
-    "bookmarks/x-bookmarks-2025-09-04_/index.md",
-    "bookmarks/x-bookmarks-2025-09-04_/Cursorが導入できない保守的な組織のPM向けにAI駆動P_2025-09-02_suh_sunaneko.md",
-    "bookmarks/x-bookmarks-2025-09-04_/Autonomous_News_AgentA_LangG_2025-08-31_LangChainAI.md",
-    "bookmarks/x-bookmarks-2025-09-04_/CUDAのバージョンを入れ替えるためにDocker使ってまし_2025-09-01_karaage0703.md",
-    "bookmarks/x-bookmarks-2025-09-04_/AI起業家、初海外旅のドイツ。ㅤ充実した4週間でしたが、_2025-09-01_SuguruKun_ai.md",
-    "bookmarks/x-bookmarks-2025-09-04_/159_page_PDF_download._The_b_2025-08-29_quantscience_.md",
     "bookmarks/x-bookmarks-2025-09-04_",
-    "bookmarks/x-bookmarks-2025-08-29_/超マニアックな話ですが、、わかる方だけAI_Agen_2025-08-21_0317_hiroya.md",
     "bookmarks/x-bookmarks-2025-08-29_",
     "bookmarks/x-bookmarks-2025-08-29",
     "無題のファイル 1.base",
     "無題のファイル.base",
-    "_scripts/__pycache__/tag_generator.cpython-313.pyc",
-    "test_modification",
-    "bookmarks/x-bookmarks-2025-08-20",
-    "bookmarks/test_integration_dir",
     "bookmarks/x-bookmarks-2025-07-28/_attachments/Pasted image 20250729152923.png",
     "Pasted image 20250729152923.png"
   ]

@@ -20,10 +20,11 @@
 
 import os
 import json
+import sys
 from pathlib import Path
 from datetime import datetime
 from tag_generator import BookmarkTagGenerator
-from add_read_property import ReadPropertyAdder
+from bookmark_manager import BookmarkManager
 
 class NewFolderProcessor:
     def __init__(self, openai_api_key: str):
@@ -34,11 +35,10 @@ class NewFolderProcessor:
             openai_api_key: OpenAI APIキー
         """
         self.tag_generator = BookmarkTagGenerator(openai_api_key)
-        self.property_adder = ReadPropertyAdder()
+        self.bookmark_manager = BookmarkManager()
         self.processed_folders_file = "processed_folders.json"
         self.processed_folders = self._load_processed_folders()
         self.bookmarks_base_dir = "bookmarks"
-        self.footer_template_file = "_templates/footer_template.md"
     
     def _load_processed_folders(self) -> set:
         """処理済みフォルダリストを読み込み"""
@@ -102,19 +102,22 @@ class NewFolderProcessor:
                 print(f"ステップ1: タグ生成中...")
                 self.tag_generator.process_bookmark_directory(folder)
                 
-                # プロパティ追加処理（統計をリセット）
+                # プロパティ追加とフッター追加処理（統合スクリプトを使用）
                 print(f"ステップ2: 「既読・整理済み」プロパティ追加中...")
-                self.property_adder.stats = {"processed": 0, "modified": 0, "skipped": 0, "errors": 0}
                 folder_name = Path(folder).name
-                self.property_adder.process_specific_directory(folder_name)
+                self.bookmark_manager.process_specific_directory(
+                    folder_name,
+                    add_property=True,
+                    add_footer=True,
+                    remove_duplicates=False
+                )
                 
-                # プロパティ追加の統計情報を表示
-                stats = self.property_adder.stats
+                # 統計情報を表示
+                stats = self.bookmark_manager.stats
                 print(f"  プロパティ追加結果: 変更 {stats['modified']} / スキップ {stats['skipped']} / エラー {stats['errors']}")
                 
-                # フッター追加処理
-                print(f"ステップ3: フッター追加中...")
-                self.add_footer_to_markdown_files(folder)
+                # 統計をリセット
+                self.bookmark_manager.stats = {"processed": 0, "modified": 0, "skipped": 0, "errors": 0}
                 
                 # 処理済みとして記録
                 self.processed_folders.add(folder)
@@ -138,7 +141,7 @@ class NewFolderProcessor:
         
         print("=== 全ブックマークフォルダ ===")
         for folder in folders:
-            status = "✓ 処理済み" if str(folder) in self.processed_folders else "✗ 未処理"
+            status = "[処理済み]" if str(folder) in self.processed_folders else "[未処理]"
             print(f"{folder.name}: {status}")
     
     def reset_processed_folders(self):
@@ -147,82 +150,6 @@ class NewFolderProcessor:
         self._save_processed_folders()
         print("処理済みフォルダリストをリセットしました")
     
-    def _load_footer_template(self) -> str:
-        """フッターテンプレートを読み込み"""
-        try:
-            if os.path.exists(self.footer_template_file):
-                with open(self.footer_template_file, 'r', encoding='utf-8') as f:
-                    template = f.read().strip()
-                    # 現在の日時でプレースホルダーを置換
-                    current_time = datetime.now().strftime('%m/%d/%Y, %I:%M:%S %p')
-                    return template.replace('{export_date}', current_time)
-            else:
-                print(f"警告: フッターテンプレートファイルが見つかりません: {self.footer_template_file}")
-                return ""
-        except Exception as e:
-            print(f"フッターテンプレート読み込みエラー: {e}")
-            return ""
-    
-    def add_footer_to_markdown_files(self, folder_path: str):
-        """
-        指定フォルダ内の全マークダウンファイルにフッターを追加
-        
-        Args:
-            folder_path: 処理対象フォルダのパス
-        """
-        footer_template = self._load_footer_template()
-        if not footer_template:
-            print("フッターテンプレートが空のため、フッター追加をスキップします")
-            return
-        
-        folder = Path(folder_path)
-        if not folder.exists():
-            print(f"フォルダが存在しません: {folder_path}")
-            return
-        
-        md_files = list(folder.glob("*.md"))
-        if not md_files:
-            print(f"マークダウンファイルが見つかりません: {folder_path}")
-            return
-        
-        processed_count = 0
-        skipped_count = 0
-        error_count = 0
-        
-        print(f"  フッター追加処理開始: {len(md_files)}個のファイル")
-        
-        for md_file in md_files:
-            try:
-                # ファイルを読み込み
-                with open(md_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                
-                # 既にフッターが存在するかチェック
-                if "*Exported at:" in content:
-                    skipped_count += 1
-                    continue
-                
-                # フッターを追加
-                if content.strip():
-                    # ファイルの最後に改行を追加してからフッターを追加
-                    if not content.endswith('\n'):
-                        content += '\n'
-                    content += '\n' + footer_template
-                else:
-                    # 空ファイルの場合はフッターのみ
-                    content = footer_template
-                
-                # ファイルに書き戻し
-                with open(md_file, 'w', encoding='utf-8') as f:
-                    f.write(content)
-                
-                processed_count += 1
-                
-            except Exception as e:
-                print(f"    エラー {md_file.name}: {e}")
-                error_count += 1
-        
-        print(f"  フッター追加完了: 処理 {processed_count} / スキップ {skipped_count} / エラー {error_count}")
 
 def main():
     """メイン関数"""

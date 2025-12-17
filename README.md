@@ -22,8 +22,9 @@ X_bookmarks/
 │   ├── x-bookmarks-2025-07-23_sikibuton_cover/
 │   └── x-bookmarks-2025-07-23_ikokeba/
 ├── _scripts/                     # 本番用スクリプトファイル
-│   ├── tag_generator.py         # タグ自動生成・Obsidian形式追加スクリプト（メイン）
-│   └── process_new_folders.py   # 新規フォルダ処理スクリプト
+│   ├── bookmark_manager.py      # ブックマーク管理統合スクリプト（メイン）
+│   ├── tag_generator.py         # タグ自動生成スクリプト（OpenAI API使用）
+│   └── process_new_folders.py   # 新規フォルダ自動検出・処理スクリプト
 ├── _tests/                       # テスト用スクリプトファイル
 │   ├── test_system.py           # システムテストスクリプト
 │   ├── simple_watercrawl_test.py # WaterCrawl単体テスト（Markdown保存機能付き）
@@ -75,35 +76,80 @@ $env:WATERCRAWL_API_KEY='your-watercrawl-api-key'
 
 ## 📖 使用方法
 
-### 🎯 本番用スクリプト（タグ管理用）
+### 🎯 本番用スクリプト（ブックマーク管理用）
 
-#### 利用可能なディレクトリの確認
+#### 📦 統合スクリプト（推奨）: `bookmark_manager.py`
 
+すべてのブックマーク処理機能を統合したメインスクリプトです。
+
+**利用可能なディレクトリの確認**
+```bash
+cd _scripts
+python bookmark_manager.py list
+```
+
+**統合処理（プロパティ追加、フッター追加、重複タグ削除）**
+```bash
+# 指定ディレクトリを処理
+python bookmark_manager.py process -d x-bookmarks-2025-12-15
+
+# 全ディレクトリを処理
+python bookmark_manager.py process --all
+
+# 特定の機能をスキップ
+python bookmark_manager.py process -d x-bookmarks-2025-12-15 --no-footer
+```
+
+**個別機能の実行**
+```bash
+# プロパティ追加のみ
+python bookmark_manager.py property -d x-bookmarks-2025-12-15
+
+# フッター追加のみ
+python bookmark_manager.py footer -d x-bookmarks-2025-12-15
+
+# 重複タグ削除のみ
+python bookmark_manager.py dedup -d x-bookmarks-2025-12-15
+
+# 手動タグ追加のみ（キーワードベース、API不要）
+python bookmark_manager.py tags-manual -d x-bookmarks-2025-12-15
+```
+
+**ドライラン（変更なしでテスト）**
+```bash
+python bookmark_manager.py process -d x-bookmarks-2025-12-15 --dry-run
+```
+
+#### 🤖 タグ自動生成スクリプト: `tag_generator.py`
+
+OpenAI APIを使用した高品質なタグ自動生成（API使用料が発生します）。
+
+**利用可能なディレクトリの確認**
 ```bash
 cd _scripts
 python tag_generator.py --list
 ```
 
-#### 指定したディレクトリのみタグ生成・Obsidian形式追加
-
+**指定したディレクトリのみタグ生成**
 ```bash
-cd _scripts
 python tag_generator.py -d bookmarks/x-bookmarks-2025-01-27_new
 ```
 
-#### すべてのディレクトリをタグ生成・Obsidian形式追加
-
+**すべてのディレクトリをタグ生成**
 ```bash
-cd _scripts
 python tag_generator.py --all
 ```
 
-#### 新規ブックマークフォルダの処理
+#### 🆕 新規フォルダ自動検出スクリプト: `process_new_folders.py`
+
+新しいブックマークフォルダを自動検出して処理（タグ生成、プロパティ追加、フッター追加を一括実行）。
 
 ```bash
 cd _scripts
 python process_new_folders.py
 ```
+
+**注意**: OpenAI APIキーが必要です。
 
 ### 🧪 テスト用スクリプト（開発・デバッグ用）
 
@@ -279,8 +325,12 @@ function categorizeTag(tag) {
 5. **外部リンク処理**: 外部リンクの要約取得には時間がかかる場合があります
 6. **Obsidian DataviewJS**: DataviewJSプラグインが必要です
 7. **JavaScriptファイル**: `javascript/`フォルダ内のJSファイルは外部参照用です
-8. **スクリプトの使い分け**: 本番用は`_scripts/`、テスト用は`_tests/`ディレクトリを使用してください
-9. **テスト用スクリプト**: 開発・デバッグ時以外は使用しないでください
+8. **スクリプトの使い分け**: 
+   - **推奨**: `bookmark_manager.py`（統合スクリプト）を使用
+   - **高品質タグ生成**: `tag_generator.py`（OpenAI API使用）
+   - **新規フォルダ自動処理**: `process_new_folders.py`
+   - **テスト用**: `_tests/`ディレクトリのスクリプトは開発・デバッグ時のみ使用
+9. **スクリプト整理**: 重複していたスクリプト（`add_read_property.py`, `add_tags_manually.py`, `process_single_folder.py`, `remove_duplicate_tags.py`）は`bookmark_manager.py`に統合されました
 
 ## 🤝 貢献
 
