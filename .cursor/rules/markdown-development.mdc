@@ -1,12 +1,20 @@
 # Obsidian Markdown開発ルール
 
 ## Obsidianプロパティ形式（YAML frontmatter）
-```yaml
+```
 ---
 tags:
   - tag_name1
   - tag_name2
 ---
+```
+
+## フッターテンプレート
+各ブックマークファイルの末尾には以下のフッターが追加されます：
+```markdown
+
+---
+**Bookmarks** powered by [Obsidian](https://obsidian.md)
 ```
 
 ## 主要Markdownファイル

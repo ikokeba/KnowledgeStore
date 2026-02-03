@@ -6,6 +6,7 @@
 ## 主要ファイル構造
 
 ### スクリプトファイル
+- [_scripts/bookmark_manager.py](mdc:_scripts/bookmark_manager.py) - ブックマーク管理統合スクリプト（プロパティ追加、フッター追加、重複排除など）
 - [_scripts/tag_generator.py](mdc:_scripts/tag_generator.py) - メインのタグ生成・Obsidian形式追加スクリプト
 - [_scripts/process_new_folders.py](mdc:_scripts/process_new_folders.py) - 新規フォルダ処理スクリプト
 

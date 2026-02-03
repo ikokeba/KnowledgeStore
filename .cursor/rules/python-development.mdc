@@ -8,6 +8,11 @@
 
 ## 主要スクリプト
 
+### [bookmark_manager.py](mdc:_scripts/bookmark_manager.py)
+- **機能**: ブックマーク処理機能の統合管理（プロパティ追加、フッター追加、重複排除、タグ抽出）
+- **コマンド**: `list`, `process`, `property`, `footer`, `dedup`, `tags-manual`
+- **特徴**: 複数の処理を一括で行う統合ツール。個別のスクリプト機能を集約。
+
 ### [tag_generator.py](mdc:_scripts/tag_generator.py)
 - **機能**: タグ生成とObsidianプロパティ形式追加を一括実行
 - **引数**: `--directory`, `--list`, `--all`
@@ -18,6 +23,7 @@
 - **機能**: 新規ブックマークフォルダの自動検出と処理
 - **検出条件**: `bookmarks/x-bookmarks-*`パターン
 - **記録**: `processed_folders.json`で処理済みフォルダを管理
+- **連携**: `bookmark_manager.py`と`tag_generator.py`を使用
 
 ## 依存関係
 - OpenAI API: タグ生成に使用

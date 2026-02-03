@@ -18,7 +18,10 @@ python process_new_folders.py
 ### 3. 手動処理（必要時）
 ```bash
 cd _scripts
+# タグ生成単体
 python tag_generator.py -d bookmarks/x-bookmarks-YYYY-MM-DD_username
+# または統合・後処理（プロパティ、フッター、重複排除）
+python bookmark_manager.py process -d bookmarks/x-bookmarks-YYYY-MM-DD_username
 ```
 
 ## 既存フォルダの再処理
@@ -26,13 +29,16 @@ python tag_generator.py -d bookmarks/x-bookmarks-YYYY-MM-DD_username
 ### 全フォルダ処理
 ```bash
 cd _scripts
+# タグ生成
 python tag_generator.py --all
+# 統合処理（プロパティ、フッター、重複排除）
+python bookmark_manager.py process --all
 ```
 
 ### 特定フォルダ処理
 ```bash
 cd _scripts
-python tag_generator.py -d bookmarks/x-bookmarks-YYYY-MM-DD_username
+python bookmark_manager.py process -d bookmarks/x-bookmarks-YYYY-MM-DD_username
 ```
 
 ## 開発・修正時のワークフロー
